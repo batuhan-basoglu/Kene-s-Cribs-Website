@@ -1,6 +1,6 @@
 ## SEG3125-LAB8
 
-The real estate website using react made by Ruchira Perrera, Sam Oyediran, Batuhan Basoglu, and Kene Ojukwu
+The Real Estate Website using React made by Ruchira Perrera, Sam Oyediran, Batuhan Basoglu, and Kene Ojukwu
 
 
 ## Authors
