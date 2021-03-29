@@ -1,0 +1,32 @@
+
+.colored-section {
+    background-color: #a77a32;
+    color: #ffffff;
+}
+
+.colored-section2 {
+    background-color: #ffe609;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.colored-section3 {
+    background-color: #cfd3ce;
+    color: #ffffff;
+}
+
+.white-section {
+    background-color: #ffffff;
+}
+
+#title .container-fluid {
+    padding: 4% 32% 6%;
+    text-align: left;
+    font-family: "Georgia";
+}
+
+#features .container-fluid {
+    padding: 3% 5% ;
+    text-align: left;
+
+}
