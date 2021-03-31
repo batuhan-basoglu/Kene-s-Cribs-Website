@@ -6,13 +6,13 @@ const Navbar = () => {
   return (
     /* Nav Bar */
     <div className="Navbar">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <img src=""></img>
-        <a href="/" class="navbar-brand">
+      <nav className="navbar navbar-expand-lg navbar-dark">
+        <img src="" alt="Logo&emsp;"></img>
+        <a href="/" className="navbar-brand">
           Kene's Cribs
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarTogglerDemo02"
@@ -20,22 +20,22 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <Link class="nav-link" exact to="/">
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <Link className="nav-link" exact to="/">
                 Home
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/listings">
+            <li className="nav-item">
+              <Link className="nav-link" to="/listings">
                 Listings
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/agents">
+            <li className="nav-item">
+              <Link className="nav-link" to="/agents">
                 Agents
               </Link>
             </li>
