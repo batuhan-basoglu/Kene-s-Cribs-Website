@@ -1,4 +1,6 @@
 import { Component } from "react";
+import ListingsPage from "./listings-page/ListingsPage";
+
 
 class App extends Component {
   render() {
@@ -9,19 +11,9 @@ class App extends Component {
           <p>Real Website loading.......</p>
         </header>
         <section>
-          <h1>hello everyone</h1>
-          <div class="alert alert-primary" role="alert">
-            A simple primary alert—check it out!
-          </div>
-          <div class="alert alert-primary" role="alert">
-            A simple primary alert—check it out!
-          </div>
-          <div class="alert alert-primary" role="alert">
-            A simple primary alert—check it out!
-          </div>
-          <div class="alert alert-primary" role="alert">
-            A simple primary alert—check it out!
-          </div>
+        
+          <ListingsPage />
+
         </section>
       </div>
     );
