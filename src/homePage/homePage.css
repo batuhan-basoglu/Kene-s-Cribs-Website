@@ -1,0 +1,62 @@
+.colored-section {
+    background-color: #ffe609;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.white-section {
+    background-color: #ffffff;
+}
+
+#title .container-fluid {
+    padding: 4% 34% 6%;
+    text-align: left;
+    font-family: "Georgia";
+}
+
+.housesIntro{
+    padding: 4% 5%;
+}
+
+.contactIntro{
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 80px;
+}
+
+.carouselSection {
+    margin: 2% 8%;
+}
+
+.headerImg{
+    width: 2000px;
+    height: 600px;
+}
+
+.heading-1{
+    padding-left: 40%;
+    padding-top: 10%;
+    padding-bottom: 20px;
+}
+
+.formhelper{
+    padding-bottom: 15px;
+}
+
+.button-1 {
+    background-color: rgb(0, 0, 0);
+    border-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.button-1:hover {
+    background-color: rgb(92, 92, 92);
+    color: #ffffff;
+    border-color: transparent;
+}
+
+.buttonhelper {
+    padding-left: 45%;
+    padding-top: 15px;
+}
