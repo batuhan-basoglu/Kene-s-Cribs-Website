@@ -7,6 +7,8 @@ import ListingsPage from "./listings-page/listings-page";
 import AgentPage from "./agent-page/agent-page";
 import ContactUs from "./shared-components/Contact-us/Contact-us";
 
+import Homepage from "./homePage/Homepage";
+
 class App extends Component {
   render() {
     return (
@@ -20,6 +22,9 @@ class App extends Component {
         </BrowserRouter>
 
         <Footer></Footer>
+        {/* <Homepage/> */}
+
+        <Homepage />
       </div>
     );
   }
