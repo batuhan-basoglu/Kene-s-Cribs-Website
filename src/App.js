@@ -1,6 +1,7 @@
 import { Component } from "react";
 import ListingsPage from "./listings-page/ListingsPage";
 
+import Homepage from './homePage/Homepage';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <ListingsPage />
 
         </section>
+          <Homepage></Homepage>
       </div>
     );
   }
