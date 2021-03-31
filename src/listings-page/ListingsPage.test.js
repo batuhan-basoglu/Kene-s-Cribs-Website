@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import ListingsPage from "./listings-page";
+import ListingsPage from "./ListingsPage";
 
 describe("ListingsPage", () => {
   test("matches snapshot", () => {
