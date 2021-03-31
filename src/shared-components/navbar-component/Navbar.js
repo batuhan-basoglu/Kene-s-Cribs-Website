@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./Navbar.css";
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <Link class="nav-link" to="/home">
+              <Link class="nav-link" to="/">
                 Home
               </Link>
             </li>
@@ -51,4 +51,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default withRouter(Navbar);
