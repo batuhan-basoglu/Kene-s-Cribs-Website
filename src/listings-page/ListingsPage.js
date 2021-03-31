@@ -117,8 +117,11 @@ class ListingsPage extends Component {
 
       <section class="colored-section2" id="cta">
 
-        <h2> Testing</h2>
 
+      {/*
+      
+    
+    
         <div class="row"> 
 
     
@@ -149,13 +152,13 @@ class ListingsPage extends Component {
           </div>
 
         </div>
-
+  */}
        
         <div class="row"> 
 
           <div class="col-12">
 
-            <h2> Map here</h2>
+            <h2> Map </h2>
        
             <div style={{ width: "100vm", height: "800px" }}>
               <MapWrapped
