@@ -9,8 +9,8 @@ const Agents = ({ agents }) => {
     return (
       <div className="agent" key={agent.id}>
         {}
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={agent.src} />
+            <Card style={{ width: "22rem", height: "40rem"  }}>
+              <Card.Img variant="top" style={{ height: "22rem" }} src={agent.src} />
               <Card.Body>
                 <Card.Title>{agent.title}</Card.Title>
                 <Card.Text>{agent.name}</Card.Text>
