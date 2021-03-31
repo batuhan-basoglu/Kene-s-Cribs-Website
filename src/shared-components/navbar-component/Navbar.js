@@ -1,13 +1,14 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./Navbar.css";
+import logo from './logo2.png';
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const Navbar = () => {
   return (
     /* Nav Bar */
     <div className="Navbar">
       <nav class="navbar navbar-expand-lg navbar-dark">
-        <img src=""></img>
+        <img src={logo} width="40" height="40"></img>
         <a href="/" class="navbar-brand">
           Kene's Cribs
         </a>
