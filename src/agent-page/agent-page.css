@@ -12,7 +12,7 @@
   }
   .center{
     height: 25vh; /* Magic here */
-    background-color: yellow;
+    background-color: #e7dec8;
     display: flex;
     justify-content: center;
     align-items: center;
