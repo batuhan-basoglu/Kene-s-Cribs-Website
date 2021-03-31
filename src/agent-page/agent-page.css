@@ -10,3 +10,10 @@
       background-position-y: -150px;
     }
   }
+  .center{
+    height: 25vh; /* Magic here */
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
