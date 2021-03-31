@@ -1,0 +1,19 @@
+.agentPage {
+    background-image: url('../images/Agent1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .miniHero {
+      background-position-y: -150px;
+    }
+  }
+  .center{
+    height: 25vh; /* Magic here */
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
