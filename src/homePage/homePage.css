@@ -14,6 +14,13 @@
     font-family: "Georgia";
 }
 
+#features .container-fluid {
+    padding: 2% 48% 2%;
+    text-align: left;
+    font-family: "Georgia";
+}
+
+
 .housesIntro{
     padding: 4% 5%;
 }
