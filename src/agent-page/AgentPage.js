@@ -38,4 +38,4 @@ import Agent6 from "../images/Agent6.jpg";
   }
 
 }
-export default AgentPage
+export default AgentPage;
