@@ -1,18 +1,27 @@
 import { Component } from "react";
+import Footer from "./shared-components/footer-component/Footer";
+import Navbar from "./shared-components/navbar-component/Navbar";
+import { BrowserRouter, Route } from "react-router-dom";
+import HomePage from "./homePage/Homepage";
+import ListingsPage from "./listings-page/ListingsPage";
+import AgentPage from "./agent-page/AgentPage";
+// import ContactUs from "./shared-components/Contact-us/Contact-us";
 
-
-
-import Homepage from './homePage/Homepage';
+import Homepage from "./homePage/Homepage";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Homepage/> */}
-        
-        <Homepage/>
-        
-        
+        <BrowserRouter>
+          <Navbar></Navbar>
+          <Route path="/home" component={HomePage}></Route>
+          <Route path="/listings" component={ListingsPage}></Route>
+          <Route path="/agents" component={AgentPage}></Route>
+          {/* <Route path="/contact-us" component={ContactUs}></Route> */}
+        </BrowserRouter>
+        <Homepage></Homepage>
+        <Footer></Footer>
       </div>
     );
   }
