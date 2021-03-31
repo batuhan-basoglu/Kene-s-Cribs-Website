@@ -20,11 +20,8 @@ class App extends Component {
           <Route path="/agents" component={AgentPage}></Route>
           {/* <Route path="/contact-us" component={ContactUs}></Route> */}
         </BrowserRouter>
-
+        <Homepage></Homepage>
         <Footer></Footer>
-        {/* <Homepage/> */}
-
-        <Homepage />
       </div>
     );
   }
