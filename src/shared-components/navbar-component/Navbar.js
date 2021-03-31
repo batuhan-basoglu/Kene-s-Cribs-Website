@@ -8,7 +8,7 @@ const Navbar = () => {
     /* Nav Bar */
     <div className="Navbar">
       <nav class="navbar navbar-expand-lg navbar-dark">
-        <img src={logo} width="40" height="40"></img>
+        <img src={logo} alt="" width="40" height="40"></img>
         <a href="/" class="navbar-brand">
           Kene's Cribs
         </a>
