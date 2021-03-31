@@ -1,4 +1,4 @@
-/* import { Component } from "react";
+import { Component } from "react";
 import './Homepage.css';
 import house1 from '../images/house1.jpg';
 import house2 from '../images/house2.jpg';
@@ -105,4 +105,3 @@ class Homepage extends Component {
 }
 
 export default Homepage;
- */
