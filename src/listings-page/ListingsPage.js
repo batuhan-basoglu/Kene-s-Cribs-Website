@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { useState, useEffect, Component } from "react";
 import {
   GoogleMap,
