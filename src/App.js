@@ -2,7 +2,7 @@ import { Component } from "react";
 import Footer from "./shared-components/footer-component/Footer";
 import Navbar from "./shared-components/navbar-component/Navbar";
 import { BrowserRouter, Route } from "react-router-dom";
-import HomePage from "./homePage/homePage";
+import HomePage from "./homePage/Homepage";
 import ListingsPage from "./listings-page/ListingsPage";
 import AgentPage from "./agent-page/AgentPage";
 // import ContactUs from "./shared-components/Contact-us/Contact-us";
