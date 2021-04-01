@@ -1,11 +1,11 @@
 import { Component } from "react";
-import "./homePage.css";
+import "./Homepage.css";
 import house1 from "../images/house1.jpg";
 import house2 from "../images/house2.jpg";
 import house3 from "../images/house3.jpg";
 import Carousel from "react-bootstrap/Carousel";
 
-class homePage extends Component {
+class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -120,4 +120,4 @@ class homePage extends Component {
   handleSubmit(event) {}
 }
 
-export default homePage;
+export default Homepage;
