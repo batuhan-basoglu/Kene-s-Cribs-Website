@@ -59,8 +59,8 @@ class homePage extends Component {
                       type="text"
                       className="form-control"
                       placeholder="First Name"
-                      value={this.state.name}
-                      onChange={this.onNameChange.bind(this)}
+                      value={this.state.firstname}
+                      onChange={this.onFirstNameChange.bind(this)}
                     />
                   </div>
                   <div className="col-6">
@@ -68,8 +68,8 @@ class homePage extends Component {
                       type="text"
                       className="form-control"
                       placeholder="Last Name"
-                      value={this.state.name}
-                      onChange={this.onNameChange.bind(this)}
+                      value={this.state.lastname}
+                      onChange={this.onLastNameChange.bind(this)}
                     />
                   </div>
                 </div>
@@ -105,8 +105,12 @@ class homePage extends Component {
     );
   }
 
-  onNameChange(event) {
-    this.setState({ name: event.target.value });
+  onFirstNameChange(event) {
+    this.setState({ firstname: event.target.value });
+  }
+
+  onLastNameChange(event) {
+    this.setState({ lastname: event.target.value });
   }
 
   onEmailChange(event) {
