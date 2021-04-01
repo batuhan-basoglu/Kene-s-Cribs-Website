@@ -104,7 +104,6 @@ class Homepage extends Component {
       </div>
     );
   }
-
   onFirstNameChange(event) {
     this.setState({ firstname: event.target.value });
   }
