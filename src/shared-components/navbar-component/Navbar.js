@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./Navbar.css";
-import logo from './logo2.png';
+import logo from "./logo2.png";
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const Navbar = () => {
   return (
@@ -35,9 +35,21 @@ const Navbar = () => {
                 Listings
               </Link>
             </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/agents">
                 Agents
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Contact Us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Login
               </Link>
             </li>
           </ul>
