@@ -4,6 +4,7 @@ import house1 from "../images/house1.jpg";
 import house2 from "../images/house2.jpg";
 import house3 from "../images/house3.jpg";
 import Carousel from "react-bootstrap/Carousel";
+import axios from 'axios'
 
 class Homepage extends Component {
   constructor(props) {
@@ -120,7 +121,26 @@ class Homepage extends Component {
     this.setState({ message: event.target.value });
   }
 
-  handleSubmit(event) {}
+  handleSubmit(event) {
+    event.preventDefault();
+
+    axios({
+      method: "POST",
+      url: "http://localhost:3002/send",
+      data: this.state
+    }).then((response) => {
+      if (response.data.status === 'success') {
+        alert("Message Sent.");
+        this.resetForm()
+      } else if (response.data.status === 'fail') {
+        alert("Message failed to send.")
+      }
+    })
+  }
+
+  resetForm() {
+    this.setState({ firstname: '', lastname: '', email: '', message: '' })
+  }
 }
 
 export default Homepage;
