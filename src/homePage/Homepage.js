@@ -4,6 +4,7 @@ import house1 from "../images/house1.jpg";
 import house2 from "../images/house2.jpg";
 import house3 from "../images/house3.jpg";
 import Carousel from "react-bootstrap/Carousel";
+import Button from "react-bootstrap/Button";
 import axios from 'axios'
 
 class Homepage extends Component {
@@ -35,12 +36,30 @@ class Homepage extends Component {
             <Carousel>
               <Carousel.Item>
                 <img className="headerImg" src={house1} alt="First House" />
+                <Carousel.Caption>
+                  <h3 style={{textShadow: "3px 3px 5px black"}}>360 Michawashkode St, Ottawa, Ontario K4A 3N6</h3>
+                  <div className="Buttonka">
+                    <Button href="/listings" variant="info">Click for Details</Button>
+                  </div>
+                </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img className="headerImg" src={house2} alt="Second House" />
+                <Carousel.Caption>
+                  <h3 style={{textShadow: "3px 3px 5px black"}}>6865 PEBBLE TRAIL WAY, Ottawa, Ontario K4P 0B7</h3>
+                  <div className="Buttonka">
+                    <Button href="/listings" variant="info">Click for Details</Button>
+                  </div>
+                </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img className="headerImg" src={house3} alt="Third House" />
+                <Carousel.Caption>
+                  <h3 style={{textShadow: "3px 3px 5px black"}}>5284 Knott Crescent, Ottawa, Ontario K4M 0A2</h3>
+                  <div className="Buttonka">
+                    <Button href="/listings" variant="info">Click for Details</Button>
+                  </div>
+                </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
           </div>
