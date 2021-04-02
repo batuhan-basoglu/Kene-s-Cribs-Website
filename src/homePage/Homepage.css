@@ -6,6 +6,9 @@
 
 .white-section {
     background-color: #ffffff;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 18%;
 }
 
 #title .container-fluid {
@@ -22,7 +25,9 @@
 
 
 .housesIntro{
-    padding: 4% 5%;
+    width: 1200px;
+    height: 800px;
+    
 }
 
 .contactIntro{
@@ -31,13 +36,9 @@
     padding-bottom: 80px;
 }
 
-.carouselSection {
-    margin: 2% 8%;
-}
-
 .headerImg{
-    width: 2000px;
-    height: 600px;
+    width: 1200px;
+    height: 800px;
 }
 
 .heading-1{
