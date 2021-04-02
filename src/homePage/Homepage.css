@@ -69,7 +69,64 @@
     padding-top: 15px;
 }
 
-.Buttonka{
+.buttonka{
     padding-top: 2px;
-    padding-bottom: 6px;
 }
+
+.prev-icon,
+.next-icon {
+  height: 210px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  background-image: none;
+  text-shadow: 2px 2px 5px black;
+}
+
+.next-icon:after
+{
+  content: '>';
+  font-size: 140px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px black;
+}
+
+.prev-icon:after {
+  content: '<';
+  font-size: 140px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px black;
+}
+
+ol.carousel-indicators {
+    position: absolute;
+    bottom: 5px;
+    margin: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+ }
+ 
+ ol.carousel-indicators li,
+ ol.carousel-indicators li.active {
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+    border-radius: 50%;
+    border: 0;
+    background: transparent;
+    box-shadow: 0 0 1px 1px black;
+ }
+ 
+ ol.carousel-indicators li {
+    background: rgb(255, 255, 255);
+    margin-left: .5rem;
+    margin-right: .5rem;
+    box-shadow: 0 0 1px 1px black;
+ }
+ 
+ ol.carousel-indicators li.active {
+    background: #17a2b8;
+    box-shadow: 0 0 1px 1px black;
+ }
