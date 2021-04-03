@@ -5,7 +5,7 @@
         {
             "LISTING_ID": 1,
             "ADDRESS": "8720 Russell Road",
-            "PRICE": "$500000",
+            "PRICE": 400000,
             "IMAGES":[
 
             ],
@@ -24,7 +24,7 @@
 
             "LISTING_ID": 2,
             "ADDRESS": "1490 Youville Drive",
-            "PRICE": "$500000",
+            "PRICE": 100000,
             "IMAGES":[
 
             ],
@@ -44,7 +44,7 @@
 
             "LISTING_ID": 3,
             "ADDRESS": "100 Charlie Rogers Place",
-            "PRICE": "$500000",
+            "PRICE": 200000,
             "IMAGES":[
 
             ],
@@ -65,7 +65,7 @@
 
             "LISTING_ID": 4,
             "ADDRESS": "2785 8th Line Road",
-            "PRICE": "$500000",
+            "PRICE": 300000,
             "IMAGES":[
 
             ],
