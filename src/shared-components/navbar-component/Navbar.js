@@ -1,18 +1,19 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./Navbar.css";
+import logo from "./logo2.png";
 /* eslint-disable jsx-a11y/anchor-is-valid */
 const Navbar = () => {
   return (
     /* Nav Bar */
     <div className="Navbar">
       <nav class="navbar navbar-expand-lg navbar-dark">
-        <img src=""></img>
+        <img src={logo} alt="" width="40" height="40"></img>
         <a href="/" class="navbar-brand">
           Kene's Cribs
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarTogglerDemo02"
@@ -20,23 +21,35 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <Link class="nav-link" exact to="/">
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <Link className="nav-link" exact to="/">
                 Home
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/listings">
+            <li className="nav-item">
+              <Link className="nav-link" to="/listings">
                 Listings
               </Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link" to="/agents">
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/agents">
                 Agents
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Contact Us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Login
               </Link>
             </li>
           </ul>
