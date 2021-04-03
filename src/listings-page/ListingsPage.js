@@ -4,11 +4,16 @@ import {
   withScriptjs, 
   withGoogleMap,
   Marker,
-  InfoWindow
+  InfoWindow,
+  useLoadScript
  } from "react-google-maps";
+
+
  import * as listingData from "./data/property-data.json";
  import mapStyles from "./mapStyles";
  import "./ListingsPage.css";
+
+ 
 
 function Map(){
 
@@ -17,6 +22,8 @@ function Map(){
 
 
   return (
+
+  
     <GoogleMap
       defaultZoom={10}
       defaultCenter={{lat: 45.4231, lng:-75.6931}}
@@ -24,8 +31,10 @@ function Map(){
       defaultOptions={{styles: mapStyles}}
     >
 
-        {listingData.Properties.map(house => (
+        {
+        listingData.Properties.map(house => {
 
+  
           <Marker
             key={house.LISTING_ID}
             position={{ 
@@ -46,10 +55,9 @@ function Map(){
 
             
           />
-        
-        
-        
-        ))}
+          
+        })
+        }
 
 
         {selectedProperty && (
@@ -95,10 +103,6 @@ function Map(){
 
         )}
 
-      
-
-
-
     </GoogleMap>
   
    
@@ -116,6 +120,70 @@ class ListingsPage extends Component {
     <div className="listings">
 
       <section class="colored-section2" id="cta">
+
+        <div className="row">
+
+          <div className="col-4">
+
+          
+          <div class="input-group rounded">
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+              aria-describedby="search-addon" />
+            <span class="input-group-text border-0" id="search-addon">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+
+
+          
+
+
+          </div>
+
+          <div className="col-4">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-4">
+
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Beds
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          
+          <div className="col-4">
+
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Beds
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
 
 
       {/*
@@ -158,7 +226,6 @@ class ListingsPage extends Component {
 
           <div class="col-12">
 
-            <h2> Map </h2>
        
             <div style={{ width: "100vm", height: "800px" }}>
               <MapWrapped
