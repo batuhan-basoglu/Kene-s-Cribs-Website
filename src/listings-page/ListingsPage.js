@@ -32,8 +32,11 @@ function Map(){
     >
 
         {
+
         listingData.Properties.map(house => {
 
+          console.log(house.PRICE)
+          house.PRICE > 100 ? 
   
           <Marker
             key={house.LISTING_ID}
@@ -55,6 +58,10 @@ function Map(){
 
             
           />
+          :
+          
+          console.log(house.PRICE)
+
           
         })
         }
