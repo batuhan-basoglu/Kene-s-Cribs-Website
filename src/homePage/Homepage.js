@@ -3,9 +3,9 @@ import "./Homepage.css";
 import house1 from "../images/house1.jpg";
 import house2 from "../images/house2.jpg";
 import house3 from "../images/house3.jpg";
+import house4 from "../images/house4.jpg";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
-import axios from 'axios'
 
 
 
@@ -13,10 +13,6 @@ class Homepage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstname: "",
-      lastname: "",
-      email: "",
-      message: "",
       nextIcon: <span className="next-icon"></span>,
       prevIcon: <span className="prev-icon"></span>,
     };
@@ -42,7 +38,8 @@ class Homepage extends Component {
               <Carousel.Item>
                 <img className="headerImg" src={house1} alt="First House" />
                 <Carousel.Caption>
-                  <h3 style={{ fontSize: "250%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>360 Michawashkode St, Ottawa, Ontario K4A 3N6</h3>
+                  <h3 style={{ fontSize: "250%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>100 Charlie Rogers, Kanata, ON K2V 1A7</h3>
+                  <h2 style={{ fontSize: "150%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>1 Bedroom, 2 Bathroom</h2>
                   <div className="buttonka">
                     <Button href="/listings" variant="info">Click for Details</Button>
                   </div>
@@ -51,7 +48,8 @@ class Homepage extends Component {
               <Carousel.Item>
                 <img className="headerImg" src={house2} alt="Second House" />
                 <Carousel.Caption>
-                  <h3 style={{ fontSize: "250%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>6865 PEBBLE TRAIL WAY, Ottawa, Ontario K4P 0B7</h3>
+                  <h3 style={{ fontSize: "250%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>1490 Youville Drive, Orléans, ON K1C 2X8</h3>
+                  <h2 style={{ fontSize: "150%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>1 Bedroom, 2 Bathroom</h2>
                   <div className="buttonka">
                     <Button href="/listings" variant="info">Click for Details</Button>
                   </div>
@@ -60,7 +58,18 @@ class Homepage extends Component {
               <Carousel.Item>
                 <img className="headerImg" src={house3} alt="Third House" />
                 <Carousel.Caption>
-                  <h3 style={{ fontSize: "250%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>5284 Knott Crescent, Ottawa, Ontario K4M 0A2</h3>
+                  <h3 style={{ fontSize: "250%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>8720 Russell Road, Navan, ON K4B 1J1</h3>
+                  <h2 style={{ fontSize: "150%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>1 Bedroom, 2 Bathroom</h2>
+                  <div className="buttonka">
+                    <Button href="/listings" variant="info">Click for Details</Button>
+                  </div>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="headerImg" src={house4} alt="Fourth House" />
+                <Carousel.Caption>
+                  <h3 style={{ fontSize: "250%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>2785 8th Line Road, Metcalfe, ON K0A 2P0</h3>
+                  <h2 style={{ fontSize: "150%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>1 Bedroom, 2 Bathroom</h2>
                   <div className="buttonka">
                     <Button href="/listings" variant="info">Click for Details</Button>
                   </div>
@@ -69,101 +78,8 @@ class Homepage extends Component {
             </Carousel>
           </div>
         </section>
-        <section class="colored-section" id="contact">
-          <div className="container-fluid">
-            <div className="contactIntro">
-              <h2 className="heading-1">Contact Us</h2>
-              <form
-                id="contact-form"
-                onSubmit={this.handleSubmit.bind(this)}
-                method="POST"
-              >
-                <div className="formhelper row">
-                  <div className="col-6">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="First Name"
-                      value={this.state.firstname}
-                      onChange={this.onFirstNameChange.bind(this)}
-                    />
-                  </div>
-                  <div className="col-6">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Last Name"
-                      value={this.state.lastname}
-                      onChange={this.onLastNameChange.bind(this)}
-                    />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <input
-                    type="email"
-                    className="form-control"
-                    placeholder="Email Address"
-                    aria-describedby="emailHelp"
-                    value={this.state.email}
-                    onChange={this.onEmailChange.bind(this)}
-                  />
-                </div>
-                <div className="form-group">
-                  <textarea
-                    className="form-control"
-                    placeholder="Message"
-                    rows="5"
-                    value={this.state.message}
-                    onChange={this.onMessageChange.bind(this)}
-                  />
-                </div>
-                <div className="buttonhelper">
-                  <button type="submit" className="button-1">
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </section>
       </div>
     );
-  }
-  onFirstNameChange(event) {
-    this.setState({ firstname: event.target.value });
-  }
-
-  onLastNameChange(event) {
-    this.setState({ lastname: event.target.value });
-  }
-
-  onEmailChange(event) {
-    this.setState({ email: event.target.value });
-  }
-
-  onMessageChange(event) {
-    this.setState({ message: event.target.value });
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-
-    axios({
-      method: "POST",
-      url: "http://localhost:3002/send",
-      data: this.state
-    }).then((response) => {
-      if (response.data.status === 'success') {
-        alert("Message Sent.");
-        this.resetForm()
-      } else if (response.data.status === 'fail') {
-        alert("Message failed to send.")
-      }
-    })
-  }
-
-  resetForm() {
-    this.setState({ firstname: '', lastname: '', email: '', message: '' })
   }
 }
 
