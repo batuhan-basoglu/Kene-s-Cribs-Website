@@ -38,8 +38,8 @@ class ContactUs extends Component {
 
                   <div className="row">
                     <div className="col-6">
-                      <select className="form-group" name="agent" id="dropdown" onChange={this.onAgentChange.bind(this)} value={this.state.agent}>
-                        <option selected>Select an Agent</option>
+                      <select className="form-group" name="agent" id="dropdown" required onChange={this.onAgentChange.bind(this)} value={this.state.agent}>
+                        <option value="">Select an Agent</option>
                         <option value="Michael">Michael</option>
                         <option value="Jin">Jin </option>
                         <option value="Anita">Anita</option>
@@ -48,16 +48,22 @@ class ContactUs extends Component {
                         <option value="Walter">Walter</option>
                         <option value="No preference">No preference</option>
                       </select>
+                      <FieldFeedbacks for="agent">
+                        <FieldFeedback when="*" />
+                      </FieldFeedbacks>
                     </div>
                     <div className="col-6">
-                      <select className="form-group" name="house" id="dropdown" onChange={this.onHouseChange.bind(this)} value={this.state.house}>
-                        <option selected>Select a House</option>
+                      <select className="form-group" name="house" id="dropdown" required onChange={this.onHouseChange.bind(this)} value={this.state.house}>
+                        <option value="">Select a House</option>
                         <option value="100 Charlie Rogers">100 Charlie Rogers</option>
                         <option value="1490 Youville Drive">1490 Youville Drive </option>
                         <option value="8720 Russell Road">8720 Russell Road</option>
                         <option value="2785 8th Line Road">2785 8th Line Road</option>
                         <option value="No preference">No preference</option>
                       </select>
+                      <FieldFeedbacks for="house">
+                        <FieldFeedback when="*" />
+                      </FieldFeedbacks>
                     </div>
                   </div>
 
