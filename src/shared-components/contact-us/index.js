@@ -27,10 +27,10 @@ router.post('/send', (req, res, next) => {
     var firstname = req.body.firstname
     var lastname = req.body.lastname
     var email = req.body.email
-    var message = req.body.message
     var agent = req.body.agent
     var house = req.body.house
-    var content = `firstname: ${firstname} \n lastname: ${lastname} \n email: ${email} \n message: ${message} \n agent: ${agent} \n house: ${house}`
+    var message = req.body.message
+    var content = `First Name: ${firstname} \n Last Name: ${lastname} \n E-mail: ${email} \n Agent: ${agent} \n House: ${house} \n Message: ${message} `
 
     var mail = {
         from: email,

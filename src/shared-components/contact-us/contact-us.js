@@ -166,27 +166,27 @@ class ContactUs extends Component {
     this.form.validateFields();
 
     if (!this.form.isValid()) {
-      console.log('form is invalid: do not submit');
+      return;
     } else {
-      console.log('form is valid: submit');
+      axios({
+        method: "POST",
+        url: "http://localhost:3002/send",
+        data: this.state
+      }).then((response) => {
+        if (response.data.status === 'success') {
+          alert("Message Sent.");
+          this.resetForm();
+        } else if (response.data.status === 'fail') {
+          alert("Message failed to send.");
+        }
+      })
     }
 
-    axios({
-      method: "POST",
-      url: "http://localhost:3002/send",
-      data: this.state
-    }).then((response) => {
-      if (response.data.status === 'success') {
-        alert("Message Sent.");
-        this.resetForm()
-      } else if (response.data.status === 'fail') {
-        alert("Message failed to send.")
-      }
-    })
+    
   }
 
   resetForm() {
-    this.setState({ firstname: '', lastname: '', email: '', message: '' })
+    this.setState({ firstname: '', lastname: '', email: '', message: '',  agent: '', house: '' })
   }
 }
 
