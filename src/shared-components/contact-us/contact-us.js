@@ -6,6 +6,9 @@ import {
   FieldFeedbacks,
   FormWithConstraints
 } from 'react-form-with-constraints';
+import Alert from 'react-bootstrap/Alert';
+
+
 
 class ContactUs extends Component {
   constructor(props) {
@@ -16,7 +19,10 @@ class ContactUs extends Component {
       email: "",
       message: "",
       agent: "",
-      house: ""
+      house: "",
+      alertBad: false,
+      alertSucess: false,
+      time: false
     };
   }
 
@@ -24,6 +30,18 @@ class ContactUs extends Component {
   render() {
     return (
       <div className="contact-us">
+        <Alert variant="danger" style={{ display: this.state.alertBad ? "block" : "none" }} onClose={() => this.setState({ alertBad: false })} dismissible>
+          <Alert.Heading>Message could not send.</Alert.Heading>
+          <p>
+            There are some errors in your contact form.
+        </p>
+        </Alert>
+        <Alert variant="success" style={{ display: this.state.alertSucess ? "block" : "none" }} onClose={() => this.setState({ alertSucess: false })} dismissible>
+          <Alert.Heading>The message is successfully sent.</Alert.Heading>
+          <p>
+            You contact form will be delivered to our support team.
+        </p>
+        </Alert>
         <div className="container">
           <section class="colored-section" id="contact">
             <div className="container-fluid">
@@ -166,27 +184,35 @@ class ContactUs extends Component {
     this.form.validateFields();
 
     if (!this.form.isValid()) {
+      this.alertBad();
       return;
     } else {
+      this.alertSuccess();
       axios({
         method: "POST",
         url: "http://localhost:3002/send",
         data: this.state
       }).then((response) => {
         if (response.data.status === 'success') {
-          alert("Message Sent.");
           this.resetForm();
         } else if (response.data.status === 'fail') {
-          alert("Message failed to send.");
+          return;
         }
       })
     }
 
-    
+  }
+
+  alertSuccess(){
+    this.setState({ alertBad: false, alertSucess: true })
+  }
+
+  alertBad(){
+    this.setState({ alertSucess: false, alertBad: true  })
   }
 
   resetForm() {
-    this.setState({ firstname: '', lastname: '', email: '', message: '',  agent: '', house: '' })
+    this.setState({ firstname: '', lastname: '', email: '', message: '', agent: '', house: '' })
   }
 }
 
