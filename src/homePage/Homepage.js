@@ -19,7 +19,7 @@ class Homepage extends Component {
   }
 
   render() {
-    const {nextIcon,prevIcon}=this.state;
+    const { nextIcon, prevIcon } = this.state;
     return (
       <div className="homePage">
         <section className="colored-section" id="title">
@@ -32,7 +32,7 @@ class Homepage extends Component {
             </div>
           </div>
         </section>
-        <section className="white-section" id="white-section">
+        <section className="white-section">
           <div className="housesIntro">
             <Carousel nextIcon={nextIcon} prevIcon={prevIcon}>
               <Carousel.Item>
@@ -76,6 +76,21 @@ class Homepage extends Component {
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>
+            <section className="colored-section" id="features">
+              <div className="container-fluid">
+                <div className="row">
+                  <div className="col-12">
+                    <h2 style={{ paddingLeft: "22rem", paddingBottom: "1rem", fontFamily: "Trebuchet MS" }}>Description </h2>
+                    <p style={{ fontSize: "110%" }}> Welcome to Kene's Cribs. Kene's Cribs is a real estator company which provides the clients with the houses. <br></br>
+                  	 The houses limited to the clients are only limited to the clients' dreams. In order to further navigate the<br></br>
+                     website, use the navigation bar to switch between pages. Listings page is for browsing houses, Agents page<br></br>
+                     is for browsing the estators, the Contact Us page is for the contacting us and the login page is for our<br></br>
+                     members who want to benefit from our deals. Above are some houses which can interest you. Feel free to<br></br>
+                     click the buttons above to explore the houses you want. </p>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </section>
       </div>
