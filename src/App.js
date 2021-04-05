@@ -6,9 +6,10 @@ import HomePage from "./homePage/Homepage";
 import ListingsPage from "./listings-page/ListingsPage";
 import AgentPage from "./agent-page/AgentPage";
 import ListingPage from "./listings-page/single-listing/listing-page";
-// import Login from "./login-page/Login";
-import Account from "./login-page/account/Account";
+import Login from "./login-page/Login";
+// import Account from "./login-page/account/Account";
 // import ContactUs from "./shared-components/Contact-us/Contact-us";
+import ContactUs from "./shared-components/contact-us/contact-us";
 
 class App extends Component {
   render() {
@@ -20,7 +21,8 @@ class App extends Component {
           <Route path="/listings" component={ListingsPage}></Route>
           <Route path="/agents" component={AgentPage}></Route>
           <Route path="/listing-page" component={ListingPage}></Route>
-          <Route path="/login" component={Account}></Route>
+          <Route path="/login" component={Login}></Route>
+          <Route path="/contact-us" component={ContactUs}></Route>
         </BrowserRouter>
         <Footer></Footer>
       </div>
