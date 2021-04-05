@@ -5,6 +5,9 @@ import { BrowserRouter, Route } from "react-router-dom";
 import HomePage from "./homePage/Homepage";
 import ListingsPage from "./listings-page/ListingsPage";
 import AgentPage from "./agent-page/AgentPage";
+import ListingPage from "./listings-page/single-listing/listing-page";
+// import Login from "./login-page/Login";
+import Account from "./login-page/account/Account";
 // import ContactUs from "./shared-components/Contact-us/Contact-us";
 
 class App extends Component {
@@ -16,6 +19,8 @@ class App extends Component {
           <Route exact path="/" component={HomePage}></Route>
           <Route path="/listings" component={ListingsPage}></Route>
           <Route path="/agents" component={AgentPage}></Route>
+          <Route path="/listing-page" component={ListingPage}></Route>
+          <Route path="/login" component={Account}></Route>
         </BrowserRouter>
         <Footer></Footer>
       </div>
