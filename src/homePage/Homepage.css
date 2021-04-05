@@ -4,21 +4,22 @@
     white-space: nowrap;
 }
 
+
 .white-section {
     background-color: #ffffff;
-    padding-top: 5rem;
+    padding-top: 10rem;
     padding-bottom: 5rem;
     padding-left: 18%;
 }
 
 #title .container-fluid {
-    padding: 4% 34% 6%;
+    padding: 5% 34% 6%;
     text-align: left;
     font-family: "Georgia";
 }
 
 #features .container-fluid {
-    padding: 2% 48% 2%;
+    padding: 2% 14% 4%;
     text-align: left;
     font-family: "Georgia";
 }
@@ -27,7 +28,6 @@
 .housesIntro{
     width: 1200px;
     height: 800px;
-    
 }
 
 .contactIntro{
@@ -120,3 +120,7 @@ ol.carousel-indicators {
     background: #17a2b8;
     box-shadow: 0 0 1px 1px black;
  }
+
+.homePage{
+    padding-bottom: 15%;
+}
