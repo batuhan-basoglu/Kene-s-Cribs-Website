@@ -1,0 +1,26 @@
+.login-page{
+    padding: 10% 30%;
+    text-align: center;
+    background-color: pink;
+    
+}
+.signin-Form{
+    border: 1px solid blanchedalmond;
+    border-radius: 2%;
+}
+
+.hr{
+    border-top: 2px dashed beige;
+    width: 30%;
+}
+.app-logo{
+    width: 15%;
+}
+.login-box{
+    padding: 0% 30%;
+}
+
+.login-btn{
+    margin: 10% 2%;
+    text-align: center;
+}
