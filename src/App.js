@@ -69,9 +69,6 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="d-flex flex-column align-items-start">
-          {t("Welcome_to_React")}
-        </div>
       </div>
       <BrowserRouter>
         <Navbar></Navbar>
