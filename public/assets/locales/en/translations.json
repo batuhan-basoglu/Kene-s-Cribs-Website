@@ -1,0 +1,27 @@
+{
+    "Welcome_to_React": "Welcome to React and react-i18next",
+    "Login_header": "Kene's Cribs",
+    "Login_message": "Welcome please back, please sign in!",
+    "Login_email": "Email address",
+    "Login_password": "Password",
+    "Login_remember_me": "remember me",
+    "Login_submit_button": "Submit",
+    "Account_header": "Personal Information",
+    "Account_message": "You can update/edit your account information here",
+    "Account_first_name": "First Name",
+    "Account_last_name": "Last Name",
+    "Account_email": "Email",
+    "Account_phone_number": "Phone Number",
+    "Account_current_password": "Current Password",
+    "Account_new_password": "New password",
+    "Account_update_button": "Update",
+    "Footer_message": "Copyright SEG3125 - Group 3",
+    "Nav_brand": "Kene's Cribs",
+    "Nav_Home": "Home",
+    "Nav_Listings": "Listings",
+    "Nav_Agents": "Agents",
+    "Nav_Contact_Us": "Contact Us",
+    "Nav_listing_page": "listing-page",
+    "Nav_Login": "Login"
+
+}
