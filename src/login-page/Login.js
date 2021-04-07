@@ -1,35 +1,52 @@
 import React, { Component } from "react";
 import Logo from "../images/logo1.png";
 import "./Login.css";
+import { Link } from "react-router-dom";
+// import { useTranslation } from "react-i18next";
+import { withTranslation } from "react-i18next";
 class Login extends Component {
   state = {
-    Accounts: [],
+    Account: {
+      firstName: "Kevon",
+      lastName: "Green",
+      email: "kevon.green@kcribs.com",
+      password: "Kcribs123",
+    },
+  };
+
+  handleLogin = (e) => {
+    console.log(e);
   };
   render() {
+    const { t } = this.props;
     return (
       <div className="login-page">
-        <form action="" className="signin-Form">
+        <form action="" className="signin-Form" onClick={this.handleLogin}>
           <img className="app-logo" src={Logo} alt="app-logo" />
-          <h1 className="form-title">Kene's Cribs</h1>
-          <p>Welcome please back, please sign in!</p>
+          <h1 className="form-title">{t("Login_header")} </h1>
+          <p>{t("Login_message")}</p>
           <hr className="hr" />
           <div className="login-box">
             <div class="form-group">
-              <label for="email">Email address</label>
+              <label for="email">{t("Login_email")}</label>
               <input
                 type="email"
                 class="form-control"
                 id="login-email"
+                // value={email}
                 aria-describedby="emailHelp"
+                placeholder="Enter your email"
                 required
               />
             </div>
             <div class="form-group">
-              <label for="password">Password</label>
+              <label for="password">{t("Login_password")}</label>
               <input
                 type="password"
                 class="form-control"
                 id="login-password"
+                // value={password}
+                placeholder="Enter your password"
                 required
               />
             </div>
@@ -40,13 +57,15 @@ class Login extends Component {
                 id="exampleCheck1"
               />
               <label class="form-check-label" for="exampleCheck1">
-                remember me
+                {t("Login_remember_me")}
               </label>
             </div>
             <div className="login-btn">
-              <button type="submit" class="btn btn-lg btn-primary">
-                Submit
-              </button>
+              <Link to="/account">
+                <button type="submit" class="btn btn-lg btn-primary">
+                  {t("Login_submit_button")}
+                </button>
+              </Link>
             </div>
           </div>
         </form>
@@ -55,4 +74,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withTranslation()(Login);
