@@ -17,3 +17,13 @@
     justify-content: center;
     align-items: center;
   }
+
+  .agent{
+    padding-left: 16%;
+    padding-top: 15px;
+  }
+  
+  .buttonfriend{
+    padding-top: 15px;
+    padding-left: 120px;
+  }
