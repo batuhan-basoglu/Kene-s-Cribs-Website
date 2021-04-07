@@ -1,9 +1,14 @@
 import React from "react";
 /* import {Link} from 'react-router-dom' */
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import {Link} from 'react-router-dom'
+/* import Button from "react-bootstrap/Button"; */
+import { useTranslation } from 'react-i18next';
+
+
 
 const Agents = ({ agents }) => {
+  const { t } = useTranslation();
   const agentlist = agents.map((agent) => {
     return (
       <div className="agent" key={agent.id}>
@@ -16,9 +21,14 @@ const Agents = ({ agents }) => {
             <Card.Text style={{ height: "7rem" }}>
               {agent.word}
             </Card.Text>
-            <div className="buttonfriend">
+            <Link to={"/contact-us/"}>
+               <button type="view" className="btn-small"> 
+                  {t("View_Button")}
+               </button>
+            </Link>
+            {/* <div className="buttonfriend">
               <Button variant="primary">VIEW</Button>
-            </div>
+            </div> */}
           </Card.Body>
         </Card>
       </div>
