@@ -1,5 +1,6 @@
 import React from "react";
 import "./listing-page.css";
+import { Link } from "react-router-dom";
 
 // import house images
 import house_img1 from "../../images/house1-2.jpg";
@@ -102,9 +103,11 @@ const ListingPage = () => {
           West facing backyard!
         </p>
         <div className="booking-btn">
-          <button type="button" class="btn btn-outline-success">
-            Book Showing
-          </button>
+          <Link to="/contact-us">
+            <button type="button" class="btn btn-lg btn-info">
+              Book Showing
+            </button>
+          </Link>
         </div>
       </div>
     </div>
