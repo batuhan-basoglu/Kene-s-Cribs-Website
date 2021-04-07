@@ -1,7 +1,9 @@
 # SEG3125-LAB8
 
-The Real Estate Website using React made by Ruchira Perrera, Sam Oyediran, Batuhan Basoglu, and Kene Ojukwu
+The Real Estate Website using React made by Ruchira Perrera, Sam Oyediran, Batuhan Basoglu, and Kene Ojukwu.
 
+
+After npm start execute the command "node src/shared-components/contact-us/index.js" in order to set up the backend of the contact form.
 
 # Authors
 
