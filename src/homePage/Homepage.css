@@ -1,21 +1,33 @@
 .colored-section {
-    background-color: #ffe609;
+    background-color: #e7dec8;
     color: #000000;
     white-space: nowrap;
 }
 
+
 .white-section {
     background-color: #ffffff;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    padding-left: 18%;
 }
 
 #title .container-fluid {
-    padding: 4% 34% 6%;
+    padding: 5% 34% 6%;
     text-align: left;
     font-family: "Georgia";
 }
 
+#features .container-fluid {
+    padding: 2% 14% 4%;
+    text-align: left;
+    font-family: "Georgia";
+}
+
+
 .housesIntro{
-    padding: 4% 5%;
+    width: 1200px;
+    height: 800px;
 }
 
 .contactIntro{
@@ -24,23 +36,9 @@
     padding-bottom: 80px;
 }
 
-.carouselSection {
-    margin: 2% 8%;
-}
-
 .headerImg{
-    width: 2000px;
-    height: 600px;
-}
-
-.heading-1{
-    padding-left: 40%;
-    padding-top: 10%;
-    padding-bottom: 20px;
-}
-
-.formhelper{
-    padding-bottom: 15px;
+    width: 1200px;
+    height: 800px;
 }
 
 .button-1 {
@@ -59,4 +57,70 @@
 .buttonhelper {
     padding-left: 45%;
     padding-top: 15px;
+}
+
+.buttonka{
+    padding-top: 2px;
+}
+
+.prev-icon,
+.next-icon {
+  height: 210px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  background-image: none;
+  text-shadow: 2px 2px 5px black;
+}
+
+.next-icon:after
+{
+  content: '>';
+  font-size: 140px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px black;
+}
+
+.prev-icon:after {
+  content: '<';
+  font-size: 140px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px black;
+}
+
+ol.carousel-indicators {
+    position: absolute;
+    bottom: 5px;
+    margin: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+ }
+ 
+ ol.carousel-indicators li,
+ ol.carousel-indicators li.active {
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+    border-radius: 50%;
+    border: 0;
+    background: transparent;
+    box-shadow: 0 0 1px 1px black;
+ }
+ 
+ ol.carousel-indicators li {
+    background: rgb(255, 255, 255);
+    margin-left: .5rem;
+    margin-right: .5rem;
+    box-shadow: 0 0 1px 1px black;
+ }
+ 
+ ol.carousel-indicators li.active {
+    background: #17a2b8;
+    box-shadow: 0 0 1px 1px black;
+ }
+
+.homePage{
+    padding-bottom: 15%;
 }
