@@ -1,268 +1,354 @@
 import React, { useState, useEffect, Component } from "react";
 import {
-  GoogleMap, 
-  withScriptjs, 
-  withGoogleMap,
+  GoogleMap,
+  useLoadScript,
   Marker,
   InfoWindow,
-  useLoadScript
- } from "react-google-maps";
+} from "@react-google-maps/api";
+import usePlacesAutocomplete, {
+  getGeocode,
+  getLatLng,
+} from "use-places-autocomplete";
+import {
+  Combobox,
+  ComboboxInput,
+  ComboboxPopover,
+  ComboboxList,
+  ComboboxOption,
+} from "@reach/combobox";
+import { formatRelative } from "date-fns";
+import Select from "react-select";
 
+import "@reach/combobox/styles.css";
+import mapStyles from "./mapStyles";
+import * as listingData from "./data/property-data.json";
+import "./ListingsPage.css";
 
- import * as listingData from "./data/property-data.json";
- import mapStyles from "./mapStyles";
- import "./ListingsPage.css";
+import compassImg from "./compass.svg";
 
- 
+const libraries = ["places"];
 
-function Map(){
+const mapContainerStyle = {
+  height: "700px",
+  width: "100vm",
+};
 
-  const [selectedProperty, setSelectedProperty] = useState(null);
+const options = {
+  styles: mapStyles,
+  disableDefaultUI: true,
+  zoomControl: true,
+};
+const center = {
+  lat: 45.4231,
+  lng: -75.6931,
+};
 
+export default function ListingsPage() {
+  const price_filter = [
+    {
+      value: null,
+      label: "Any",
+    },
+    {
+      value: 100000,
+      label: "$100000",
+    },
+    {
+      value: 200000,
+      label: "$200000",
+    },
+    {
+      value: 300000,
+      label: "$300000",
+    },
+    {
+      value: 400000,
+      label: "$400000",
+    }
+  ];
 
+  const bed_filter = [
+    {
+      value: null,
+      label: "Any",
+    },
+    {
+      value: 1,
+      label: "One Bed",
+    },
+    {
+      value: 2,
+      label: "Two Beds",
+    },
+    {
+      value: 3,
+      label: "Three Beds",
+    }
+
+  ];
+
+  const bath_filter = [
+    {
+      value: null,
+      label: "Any",
+    },
+    {
+      value: 1,
+      label: "One Bath",
+    },
+    {
+      value: 2,
+      label: "Two Baths",
+    },
+    {
+      value: 3,
+      label: "Three Baths",
+    }
+  ];
+
+  //console.log(data1[0]);
+
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: `https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
+     AIzaSyC5TiZoTEwEcB_HUZRhe_rXrcSWW1Z5x8I`,
+    libraries,
+  });
+
+  const [selectedBudget, setSelectedBudget] = useState(null);
+  const [selectedBeds, setSelectedBeds] = useState(null);
+  const [selectedBaths, setSelectedBaths] = useState(null);
+
+  const [markers, setMarkers] = React.useState([]);
+  const [selected, setSelected] = React.useState(null);
+
+  const [budget, setBudget] = useState(null);
+  const [bed, setBed] = useState(null);
+  const [bath, setBath] = useState(null);
+
+  const mapRef = React.useRef();
+  const onMapLoad = React.useCallback((map) => {
+    mapRef.current = map;
+    //console.log(current);
+  }, []);
+
+  const panTo = React.useCallback(({ lat, lng }) => {
+    mapRef.current.panTo({ lat, lng });
+    mapRef.current.setZoom(10);
+  }, []);
+
+  if (loadError) return "Error";
+  if (!isLoaded) return "Loading...";
+
+  // handle onChange event of the dropdown
+  const handleBudgetChange = (e) => {
+    setSelectedBudget(e);
+    setBudget(e.value);
+
+    //https://stackoverflow.com/questions/54150783/react-hooks-usestate-with-object
+    //https://stackoverflow.com/questions/57341541/removing-object-from-array-using-hooks-usestate/57341724
+  };
+  const handleBedChange = (e) => {
+    setSelectedBeds(e);
+    setBed(e.value);
+  };
+  const handleBathChange = (e) => {
+    setSelectedBaths(e);
+    setBath(e.value);
+  };
 
   return (
 
-  
-    <GoogleMap
-      defaultZoom={10}
-      defaultCenter={{lat: 45.4231, lng:-75.6931}}
-      //https://snazzymaps.com/explore
-      defaultOptions={{styles: mapStyles}}
-    >
+    <div className="main_borders">
 
-        {
+      <div class="filters">
+        <Search class="search" panTo={panTo} />
+        <Locate class="search" panTo={panTo} />
 
-        listingData.Properties.map(house => {
+        <Select
+          class="search"
+          placeholder="Select Budget"
+          value={selectedBudget} // set selected value
+          options={price_filter} // set list of the data
+          onChange={handleBudgetChange} // assign onChange function
+        />
 
-          console.log(house.PRICE)
-          house.PRICE > 100 ? 
-  
-          <Marker
-            key={house.LISTING_ID}
-            position={{ 
-              lat: house.coordinates[1],
-              lng: house.coordinates[0]
-            
-            }}      
+        <Select
+          class="search"
+          placeholder="# Beds"
+          value={selectedBeds} // set selected value
+          options={bed_filter} // set list of the data
+          onChange={handleBedChange} // assign onChange function
+        />
 
-            onClick={() => {
-              setSelectedProperty(house)
-            }}      
-
-            icon={{
-              url:"homes-3.svg",
-              scaledSize: new window.google.maps.Size(50,50)
-            }}
-            
-
-            
-          />
-          :
-          
-          console.log(house.PRICE)
-
-          
-        })
-        }
+        <Select
+          class="search"
+          placeholder="# Baths"
+          value={selectedBaths} // set selected value
+          options={bath_filter} // set list of the data
+          onChange={handleBathChange} // assign onChange function
+        />
+      </div>
 
 
-        {selectedProperty && (
-          
-          <InfoWindow
-            position={{ 
-              lat: selectedProperty.coordinates[1],
-              lng: selectedProperty.coordinates[0]
-            
-            }} 
-            onCloseClick={() => {
-             setSelectedProperty(null);
-            }}
-          >
-            <div> 
-              <h2>{selectedProperty.ADDRESS}</h2>
-              <p> {selectedProperty.DESC}</p>
-              <div>
-                <div class="row">
 
-                  <div className="col-6">
-                  <i class="fas fa-bed fa-3x"></i> <span class="popup_nums"> 1 </span>
-                  <i class="fas fa-bath fa-3x"></i> <span class="popup_nums"> 2</span>
-           
-
-
-                  </div>
-
-                  <div className="col-6 booking_button">
-                  <button>Show Listing</button>
-
-
-                  </div>
-
-                </div>
-                
-
-              </div>
-     
-              
-            </div>
-          </InfoWindow>
-
-        )}
-
-    </GoogleMap>
-  
-   
-  );
-
-}
-
-const MapWrapped = withScriptjs(withGoogleMap(Map))
-
-
-class ListingsPage extends Component {
-  render() {
-    return (
-
-    <div className="listings">
-
-      <section class="colored-section2" id="cta">
-
-        <div className="row">
-
-          <div className="col-4">
-
-          
-          <div class="input-group rounded">
-            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-              aria-describedby="search-addon" />
-            <span class="input-group-text border-0" id="search-addon">
-              <i class="fas fa-search"></i>
-            </span>
-          </div>
-
-
-          
-
-
-          </div>
-
-          <div className="col-4">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-4">
-
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Beds
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </div>
-          </div>
-
-
-          
-          <div className="col-4">
-
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Beds
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-
-      {/*
-      
-    
-    
-        <div class="row"> 
-
-    
-          <div class="col-12">
-          
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown button
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </div>
-
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown button
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </div>
-
-          </div>
-
-        </div>
-  */}
-       
-        <div class="row"> 
-
-          <div class="col-12">
-
-       
-            <div style={{ width: "100vm", height: "800px" }}>
-              <MapWrapped
-                googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
-                AIzaSyC5TiZoTEwEcB_HUZRhe_rXrcSWW1Z5x8I`}
-                loadingElement={<div style={{ height: `100%` }} />}
-                containerElement={<div style={{ height: `100%` }} />}
-                mapElement={<div style={{ height: `100%` }} />}
+      <div >
+        <GoogleMap
+          id="map"
+          mapContainerStyle={mapContainerStyle}
+          zoom={10}
+          center={center}
+          options={options}
+          onLoad={onMapLoad}
+        >
+          {listingData.Properties.map((house) =>
+            (budget >= house.PRICE || !budget) &&
+            (bed == house.BEDS || !bed) &&
+            (bath == house.BATHS || !bath) ? (
+              <Marker
+                key={house.LISTING_ID}
+                position={{
+                  lat: house.coordinates[1],
+                  lng: house.coordinates[0],
+                }}
+                onClick={() => {
+                  setSelected(house);
+                }}
+                icon={{
+                  url: "homes-3.svg",
+                  scaledSize: new window.google.maps.Size(50, 50),
+                }}
+                visible={true}
               />
-            </div>
+            ) : (
+              <Marker
+                key={house.LISTING_ID}
+                position={{
+                  lat: house.coordinates[1],
+                  lng: house.coordinates[0],
+                }}
+                onClick={() => {
+                  setSelected(house);
+                }}
+                icon={{
+                  url: "homes-3.svg",
+                  scaledSize: new window.google.maps.Size(50, 50),
+                }}
+                visible={false}
+              />
+            )
+          )}
 
+          {selected ? (
+            <InfoWindow
+              position={{
+                lat: selected.coordinates[1],
+                lng: selected.coordinates[0],
+              }}
+              onCloseClick={() => {
+                setSelected(null);
+              }}
+            >
+              <div>
+                <h2>{selected.ADDRESS}</h2>
+                <p> {selected.DESC}</p>
+                <div>
+                  <div class="row">
+                    <div className="col-6">
+                      <i class="fas fa-bed fa-3x"></i>{" "}
+                      <span class="popup_nums"> {selected.BEDS} </span>
+                      <i class="fas fa-bath fa-3x"></i>{" "}
+                      <span class="popup_nums"> {selected.BATHS}</span>
+                    </div>
 
-
-
-          </div>
-        
-        </div>
-
-     
-          
-
-      </section>
-
-    
+                    <div className="col-6 booking_button">
+                      <button>Show Listing</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </InfoWindow>
+          ) : null}
+        </GoogleMap>
+      </div>
     </div>
-    
-
-
-    ); 
-  }
+  );
 }
 
-export default ListingsPage;
+function Locate({ panTo }) {
+  return (
+    <button
+      data-toggle="tooltip"
+      data-placement="right"
+      title="Go to my current location"
+      class="buttonImg"
+      onClick={() => {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            panTo({
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            });
+          },
+          () => null
+        );
+      }}
+    >
+      <img src={compassImg} class="compass" alt="my location" />
+    </button>
+  );
+}
+
+function Search({ panTo }) {
+  const {
+    ready,
+    value,
+    suggestions: { status, data },
+    setValue,
+    clearSuggestions,
+  } = usePlacesAutocomplete({
+    requestOptions: {
+      location: { lat: () => 43.6532, lng: () => -79.3832 },
+      radius: 100 * 1000,
+    },
+  });
+
+  // https://developers.google.com/maps/documentation/javascript/reference/places-autocomplete-service#AutocompletionRequest
+
+  const handleInput = (e) => {
+    setValue(e.target.value);
+  };
+
+  const handleSelect = async (address) => {
+    setValue(address, false);
+    clearSuggestions();
+
+    try {
+      const results = await getGeocode({ address });
+      const { lat, lng } = await getLatLng(results[0]);
+      panTo({ lat, lng });
+    } catch (error) {
+      console.log("😱 Error: ", error);
+    }
+  };
+
+  return (
+    <div className="search">
+      <Combobox onSelect={handleSelect}>
+        <ComboboxInput
+          value={value}
+          onChange={handleInput}
+          disabled={!ready}
+          placeholder="Search your location"
+        />
+        <ComboboxPopover>
+          <ComboboxList>
+            {status === "OK" &&
+              data.map(({ id, description }) => (
+                <ComboboxOption key={id} value={description} />
+              ))}
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+    </div>
+  );
+}
