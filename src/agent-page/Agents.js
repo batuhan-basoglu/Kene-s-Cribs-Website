@@ -1,5 +1,4 @@
 import React from "react";
-import AgentPage from "./AgentPage";
 /* import {Link} from 'react-router-dom' */
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
@@ -9,17 +8,19 @@ const Agents = ({ agents }) => {
     return (
       <div className="agent" key={agent.id}>
         {}
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={agent.src} />
-              <Card.Body>
-                <Card.Title>{agent.title}</Card.Title>
-                <Card.Text>{agent.name}</Card.Text>
-                <Card.Text>
-                  {agent.word}
-                </Card.Text>
-                <Button variant="primary">VIEW</Button>
-              </Card.Body>
-            </Card>
+        <Card style={{ width: "22rem", height: "42rem" }}>
+          <Card.Img variant="top" style={{ height: "22rem" }} src={agent.src} />
+          <Card.Body>
+            <Card.Title>{agent.title}</Card.Title>
+            <Card.Text>{agent.name}</Card.Text>
+            <Card.Text style={{ height: "7rem" }}>
+              {agent.word}
+            </Card.Text>
+            <div className="buttonfriend">
+              <Button variant="primary">VIEW</Button>
+            </div>
+          </Card.Body>
+        </Card>
       </div>
     );
   });
