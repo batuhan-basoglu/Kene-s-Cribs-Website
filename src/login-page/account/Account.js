@@ -1,145 +1,154 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Account.css";
 import Profile from "../../images/profile-picture.png";
+import { withTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
-const Account = () => {
-  return (
-    <div className="account-info">
-      <div className="account-header">
-        <h2 className="account-title">Personal Information</h2>
-        <p className="account-text">
-          You can update/edit your account information here
-        </p>
-      </div>
-
-      <div className="row account-box">
-        <div className="col-4">
-          <img src={Profile} alt="profile-img" className="account-img" />
+class Account extends Component {
+  state = {
+    Account: {
+      firstName: "Kevon",
+      lastName: "Green",
+      email: "kevon.green@kcribs.com",
+      password: "Kcribs123",
+    },
+  };
+  render() {
+    const { t } = this.props;
+    return (
+      <div className="account-info">
+        {/* // send information to my login component  */}
+        <div className="account-header">
+          <h2 className="account-title">{t("Account_header")}</h2>
+          <p className="account-text">{t("Account_message")}</p>
         </div>
-        <div className="col-8">
-          <form action="" className="update-account">
-            <div class="row form-group info-group">
-              <div className="col-4">
-                <label class="label-text" for="email">
-                  First Name
-                </label>
-              </div>
-              <div className="col-8 update-input">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="account-fname"
-                  required
-                />
-              </div>
-            </div>
-            <div class="row form-group info-group">
-              <div className="col-4">
-                <label class="label-text" for="email">
-                  Last Name
-                </label>
-              </div>
-              <div className="col-8 update-input">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="account-lname"
-                  required
-                />
-              </div>
-            </div>
 
-            <div class="row form-group info-group">
-              <div className="col-4">
-                <label class="label-text" for="email">
-                  Email
-                </label>
+        <div className="row account-box">
+          <div className="col-4">
+            <img src={Profile} alt="profile-img" className="account-img" />
+          </div>
+          <div className="col-8">
+            <form action="" className="update-account">
+              <div class="row form-group info-group">
+                <div className="col-4">
+                  <label class="label-text" for="email">
+                    {t("Account_first_name")}
+                  </label>
+                </div>
+                <div className="col-8 update-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="account-fname"
+                    placeholder={this.state.Account.firstName}
+                    required
+                    disabled={true}
+                  />
+                </div>
               </div>
-              <div className="col-8 update-input">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="account-email"
-                  aria-describedby="emailHelp"
-                  required
-                />
-              </div>
-            </div>
-            <div class="row form-group info-group">
-              <div className="col-4">
-                <label class="label-text" for="email">
-                  Phone Number
-                </label>
-              </div>
-              <div className="col-8 update-input">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="account-phoneNumber"
-                  required
-                />
-              </div>
-            </div>
-            <div class="row form-group info-group">
-              <div className="col-4">
-                <label class="label-text" for="email">
-                  Existing Password
-                </label>
-              </div>
-              <div className="col-8 update-input">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="account-existPassword"
-                  required
-                />
-              </div>
-            </div>
-            <div class="row form-group info-group">
-              <div className="col-4">
-                <label class="label-text" for="email">
-                  New password
-                </label>
-              </div>
-              <div className="col-8 update-input">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="account-newPassword"
-                  required
-                />
-              </div>
-            </div>
-            <div class="row form-group info-group">
-              <div className="col-4">
-                <label class="label-text" for="email">
-                  Confirm New Password
-                </label>
-              </div>
-              <div className="col-8 update-input">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="account-confirmPassword"
-                  required
-                />
+              <div class="row form-group info-group">
+                <div className="col-4">
+                  <label class="label-text" for="email">
+                    {t("Account_last_name")}
+                  </label>
+                </div>
+                <div className="col-8 update-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="account-lname"
+                    placeholder={this.state.Account.lastName}
+                    required
+                    disabled={true}
+                  />
+                </div>
               </div>
 
+              <div class="row form-group info-group">
+                <div className="col-4">
+                  <label class="label-text" for="email">
+                    {t("Account_email")}
+                  </label>
+                </div>
+                <div className="col-8 update-input">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="account-email"
+                    aria-describedby="emailHelp"
+                    placeholder={this.state.Account.email}
+                    required
+                    disabled={true}
+                  />
+                </div>
+              </div>
+              <div class="row form-group info-group">
+                <div className="col-4">
+                  <label class="label-text" for="email">
+                    {t("Account_phone_number")}
+                  </label>
+                </div>
+                <div className="col-8 update-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="account-phoneNumber"
+                    placeholder={this.state.Account.email}
+                    required
+                    disabled={true}
+                  />
+                </div>
+              </div>
+              <div class="row form-group info-group">
+                <div className="col-4">
+                  <label class="label-text" for="email">
+                    {t("Account_current_password")}
+                  </label>
+                </div>
+                <div className="col-8 update-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="account-existPassword"
+                    placeholder={"**************"}
+                    required
+                    disabled={true}
+                  />
+                </div>
+              </div>
+              {/* <div class="row form-group info-group">
+                <div className="col-4">
+                  <label class="label-text" for="email">
+                    {t("Account_new_password")}
+                  </label>
+                </div>
+                <div className="col-8 update-input">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="account-newPassword"
+                    required
+                  />
+                </div>
+              </div> */}
               <div className="update-btn">
-                <button type="button" class="btn btn-lg btn-danger">
-                  Update
+                <button
+                  type="button"
+                  class="btn btn-lg btn-danger"
+                  disabled={true}
+                >
+                  {t("Account_update_button")}
                 </button>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
-      <h2 className="account-title">Booked Appointments</h2>
-    </div>
-  );
-};
+    );
+  }
+}
 
 //links
 // https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png
 
-export default Account;
+export default withTranslation()(Account);
