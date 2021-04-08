@@ -1,19 +1,20 @@
 import React from "react";
 import "./listing-page-3.css";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 // import house images
 import house_img1 from "../../images/house1.jpg";
 import house_img2 from "../../images/house3-2.jpg";
 import house_img3 from "../../images/house3-3.jpg";
 const ListingPage3 = () => {
+  const { t } = useTranslation();
   return (
     <div className="single-listing-3">
       {/* Listing header */}
       <div className="row listing-header">
         <div className="col-12">
           <h2 className="listing-title">
-            <i class="fas fa-home title-icon"></i> 100 Charlie Rogers Place
+            <i class="fas fa-home title-icon"></i> {t("Listing3-address")}
           </h2>
         </div>
       </div>
@@ -79,27 +80,12 @@ const ListingPage3 = () => {
 
       {/* Description for the listing */}
       <div className="description-box">
-        <h2 className="description-title">Description</h2>
-        <p className="listing-description">
-          Custom, Hi-Ranch home located in sought after neighborhood in the
-          Heart of Petawawa. This home features 2+1 bedrooms and 4 bathrooms.
-          Main level features spacious foyer, hardwood staircase, gleaming
-          hardwood floors and open concept living. Large windows provide lots of
-          natural light, vaulted ceilings in living room, a spectacular spacious
-          kitchen with stainless steel appliances and large island. Master
-          bedroom with walk through closet and 3 piece en-suite with custom tile
-          shower and heated tile floor. Lower level features a finished rec room
-          with cozy gas fireplace, bedroom and 3 piece bathroom. Patio door in
-          foyer leads to large private backyard with no rear neighbours,
-          spacious wood deck and hot tub. Double attached garage completes the
-          package. Pack your backs and move right in! No Conveyances of offers
-          until Friday April 9th at 3PM however the seller has the right to view
-          and may accept pre-emptive offers
-        </p>
+        <h2 className="description-title">{t("Listing-description-header")}</h2>
+        <p className="listing-description">{t("Listing3-description")}</p>
         <div className="booking-btn">
           <Link to="/contact-us">
             <button type="button" class="btn btn-lg btn-info">
-              Book Showing
+              {t("Listing-booking-btn")}
             </button>
           </Link>
         </div>
