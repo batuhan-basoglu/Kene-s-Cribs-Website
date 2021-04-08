@@ -1,17 +1,19 @@
 import React from "react";
-import "./listing-page.css";
+import "./listing-page-1.css";
 import { Link } from "react-router-dom";
 
 // import house images
-import house_img1 from "../../images/house1-2.jpg";
-const ListingPage = () => {
+import house_img1 from "../../images/house3.jpg";
+import house_img2 from "../../images/house1-2.jpg";
+import house_img3 from "../../images/house1-3.jpg";
+const ListingPage1 = () => {
   return (
-    <div className="single-listing">
+    <div className="single-listing-1">
       {/* Listing header */}
       <div className="row listing-header">
         <div className="col-12">
           <h2 className="listing-title">
-            <i class="fas fa-home title-icon"></i> My title
+            <i class="fas fa-home title-icon"></i> 8720 Russell Road
           </h2>
         </div>
       </div>
@@ -33,14 +35,14 @@ const ListingPage = () => {
             </div>
             <div class="carousel-item carousel-img">
               <img
-                src={house_img1}
+                src={house_img2}
                 class="d-block w-100"
                 alt="listing-img"
               ></img>
             </div>
             <div class="carousel-item">
               <img
-                src={house_img1}
+                src={house_img3}
                 class="d-block w-100"
                 alt="listing-img"
               ></img>
@@ -69,38 +71,32 @@ const ListingPage = () => {
 
       {/* Text box for listing amenities */}
       <div className="amentities">
-        <span className="amentities-text">1</span>
-        <i class="fas fa-bed fa-2x amentities-icon"></i>
         <span className="amentities-text">2</span>
-        <i class="fas fa-bath fa-2x amentities-icon"></i>
-        <span className="amentities-text">3</span>
-        <i class="fas fa-wifi fa-2x amentities-icon"></i>
+        <i class="fas fa-bed fa-3x amentities-icon"></i>
+        <span className="amentities-text">4</span>
+        <i class="fas fa-bath fa-3x amentities-icon"></i>
       </div>
 
       {/* Description for the listing */}
       <div className="description-box">
         <h2 className="description-title">Description</h2>
         <p className="listing-description">
-          MOVE IN READY I WALKING DISTANCE TO SHOPPING, SCHOOLS AND TRANSIT I
-          Conveniently located in Haysboro, you have Restaurants, Groceries,
-          Coffee shops, Schools and a Library all within walking distance. This
-          Updated Bungalow offers over 2000 square feet of developed living
-          space, 3 Bedrooms upstairs to accommodate almost any family and 2 down
-          stairs in the fully developed basement. Having a separate entrance
-          downstairs through the backyard makes it much easier if you ever want
-          to convert the basement into a suite. The double garage is even heated
-          with 220v plus 2 additional spaces that could be used for RV parking
-          or for any additional vehicles in the house. You will notice the home
-          has been tastefully updated over the years including a soaker tub in
-          the bathroom, in the kitchen your cabinetry goes right to the ceiling
-          for a nice finished look, granite counters and Kitchenaid appliances
-          and a new garburator. The entire property has a fresh coat of paint
-          inside and out, Newer windows and roof along with the Plumbing,
-          Electrical (Cat 5 connection throughout and 200amp service) has been
-          updated. Last but not least, the back deck already has gas and ready
-          for the BBQ season. With the BIG updates being done, all that is left
-          to do is enjoy Summer on the deck or enjoy a bonfire in your sunny
-          West facing backyard!
+          RUN DON'T WALK to this beautiful former Jayman show home. This home
+          has every feature and convenience you could want in a home. When you
+          enter you will be greeted with a large entry way, open concept main
+          floor with a very spacious chef-like kitchen, the big eat in dinning
+          area is an entertainers dream and plenty of room in the living room as
+          to cozy up to the fireplace. When you head upstairs the owner 's suite
+          will impress with a gorgeous ensuite consisting of a large soaker tub,
+          oversized shower, separate vanities, in-floor heating and 2 separate
+          closest. You will also find a nice sized flex room, spacious laundry
+          room up stairs, 4 piece main bathroom and 2 more bedrooms. Then head
+          downstairs where you will find another bedroom, bathroom and Theatre
+          room with wet bar and beverage station that is perfect for any movie
+          lover. Must not forget that this home is air conditioned, has front
+          and back irrigation outside and speakers throughout the house. All of
+          this can be yours in the lake community of Auburn Bay close to all
+          amenities and year round lake access just a short distance away
         </p>
         <div className="booking-btn">
           <Link to="/contact-us">
@@ -136,4 +132,4 @@ const ListingPage = () => {
 // 2 ->https://pictureitsoldfl.com/wp-content/uploads/2016/07/305-Rudder-Cay-Way-Jupiter-FL-print-014-28-Family-Room-4200x2800-300dpi-1170x780.jpg
 // 3 ->https://www.tlcinteriors.com.au/wp-content/uploads/2018/06/hamptons-style-kitchen-from-metricon-bayville-display-home.jpg
 
-export default ListingPage;
+export default ListingPage1;

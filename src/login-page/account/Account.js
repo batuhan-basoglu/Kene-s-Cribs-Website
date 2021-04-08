@@ -11,6 +11,7 @@ class Account extends Component {
       lastName: "Green",
       email: "kevon.green@kcribs.com",
       password: "Kcribs123",
+      phoneNumber: "613-234-8796",
     },
   };
   render() {
@@ -93,7 +94,7 @@ class Account extends Component {
                     type="text"
                     class="form-control"
                     id="account-phoneNumber"
-                    placeholder={this.state.Account.email}
+                    placeholder={this.state.Account.phoneNumber}
                     required
                     disabled={true}
                   />
