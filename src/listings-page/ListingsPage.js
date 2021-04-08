@@ -203,8 +203,8 @@ export default function ListingsPage() {
         >
           {listingData.Properties.map((house) =>
             (budget >= house.PRICE || !budget) &&
-            (bed == house.BEDS || !bed) &&
-            (bath == house.BATHS || !bath) ? (
+              (bed == house.BEDS || !bed) &&
+              (bath == house.BATHS || !bath) ? (
               <Marker
                 key={house.LISTING_ID}
                 position={{
@@ -262,7 +262,8 @@ export default function ListingsPage() {
                     </div>
 
                     <div className="col-6 booking_button">
-                      <button>Show Listing</button>
+                      <button onClick={() => { window.location.href='/listing-page-'+selected.LISTING_ID
+                      }}>Show Listing</button>
                     </div>
                   </div>
                 </div>

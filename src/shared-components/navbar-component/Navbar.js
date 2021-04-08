@@ -51,12 +51,6 @@ const Navbar = () => {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/listing-page">
-                {t("Nav_listing_page")}
-              </Link>
-            </li>
-
-            <li className="nav-item">
               <Link className="nav-link" to="/login">
                 {t("Nav_Login")}
               </Link>
