@@ -17,7 +17,7 @@ import {
   ComboboxList,
   ComboboxOption,
 } from "@reach/combobox";
-import { formatRelative } from "date-fns";
+//import { formatRelative } from "date-fns";
 import Select from "react-select";
 
 import "@reach/combobox/styles.css";
@@ -26,6 +26,8 @@ import * as listingData from "./data/property-data.json";
 import "./ListingsPage.css";
 
 import compassImg from "./compass.svg";
+import { withTranslation } from "react-i18next";
+
 
 const libraries = ["places"];
 
@@ -111,7 +113,7 @@ export default function ListingsPage() {
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: `https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
-     AIzaSyC5TiZoTEwEcB_HUZRhe_rXrcSWW1Z5x8I`,
+    AIzaSyC5TiZoTEwEcB_HUZRhe_rXrcSWW1Z5x8I`,
     libraries,
   });
 
@@ -119,7 +121,7 @@ export default function ListingsPage() {
   const [selectedBeds, setSelectedBeds] = useState(null);
   const [selectedBaths, setSelectedBaths] = useState(null);
 
-  const [markers, setMarkers] = React.useState([]);
+  //const [markers, setMarkers] = React.useState([]);
   const [selected, setSelected] = React.useState(null);
 
   const [budget, setBudget] = useState(null);
@@ -157,6 +159,7 @@ export default function ListingsPage() {
     setBath(e.value);
   };
 
+  const { t } = this.props;
   return (
 
     <div className="main_borders">
@@ -203,8 +206,8 @@ export default function ListingsPage() {
         >
           {listingData.Properties.map((house) =>
             (budget >= house.PRICE || !budget) &&
-            (bed == house.BEDS || !bed) &&
-            (bath == house.BATHS || !bath) ? (
+            (bed === house.BEDS || !bed) &&
+            (bath === house.BATHS || !bath) ? (
               <Marker
                 key={house.LISTING_ID}
                 position={{
