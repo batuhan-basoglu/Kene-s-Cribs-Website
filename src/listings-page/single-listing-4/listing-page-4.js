@@ -3,7 +3,9 @@ import "./listing-page-4.css";
 import { Link } from "react-router-dom";
 
 // import house images
-import house_img1 from "../../images/house1-2.jpg";
+import house_img1 from "../../images/house4.jpg";
+import house_img2 from "../../images/house4-2.jpg";
+import house_img3 from "../../images/house4-3.jpg";
 const ListingPage4 = () => {
   return (
     <div className="single-listing-4">
@@ -33,14 +35,14 @@ const ListingPage4 = () => {
             </div>
             <div class="carousel-item carousel-img">
               <img
-                src={house_img1}
+                src={house_img2}
                 class="d-block w-100"
                 alt="listing-img"
               ></img>
             </div>
             <div class="carousel-item">
               <img
-                src={house_img1}
+                src={house_img3}
                 class="d-block w-100"
                 alt="listing-img"
               ></img>
@@ -69,12 +71,10 @@ const ListingPage4 = () => {
 
       {/* Text box for listing amenities */}
       <div className="amentities">
-        <span className="amentities-text">1</span>
-        <i class="fas fa-bed fa-2x amentities-icon"></i>
-        <span className="amentities-text">2</span>
-        <i class="fas fa-bath fa-2x amentities-icon"></i>
         <span className="amentities-text">3</span>
-        <i class="fas fa-wifi fa-2x amentities-icon"></i>
+        <i class="fas fa-bed fa-3x amentities-icon"></i>
+        <span className="amentities-text">3</span>
+        <i class="fas fa-bath fa-3x amentities-icon"></i>
       </div>
 
       {/* Description for the listing */}
