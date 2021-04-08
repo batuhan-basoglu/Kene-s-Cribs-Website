@@ -1,7 +1,11 @@
-.colored-section {
-    background-color: #e7dec8;
-    color: #000000;
-    white-space: nowrap;
+.big-heading{
+    font-family: 'Source Sans Pro',sans-serif!important;
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow: rgb(0 0 0 / 10%) 0 5px 10px;
+    text-align: center;
+    color:rgb(53, 53, 53);
+
 }
 
 
