@@ -1,17 +1,17 @@
 import React from "react";
-import "./listing-page.css";
+import "./listing-page-1.css";
 import { Link } from "react-router-dom";
 
 // import house images
 import house_img1 from "../../images/house1-2.jpg";
-const ListingPage = () => {
+const ListingPage1 = () => {
   return (
-    <div className="single-listing">
+    <div className="single-listing-1">
       {/* Listing header */}
       <div className="row listing-header">
         <div className="col-12">
           <h2 className="listing-title">
-            <i class="fas fa-home title-icon"></i> My title
+            <i class="fas fa-home title-icon"></i> 8720 Russell Road
           </h2>
         </div>
       </div>
@@ -136,4 +136,4 @@ const ListingPage = () => {
 // 2 ->https://pictureitsoldfl.com/wp-content/uploads/2016/07/305-Rudder-Cay-Way-Jupiter-FL-print-014-28-Family-Room-4200x2800-300dpi-1170x780.jpg
 // 3 ->https://www.tlcinteriors.com.au/wp-content/uploads/2018/06/hamptons-style-kitchen-from-metricon-bayville-display-home.jpg
 
-export default ListingPage;
+export default ListingPage1;
