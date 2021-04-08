@@ -265,7 +265,8 @@ export default function ListingsPage() {
                     </div>
 
                     <div className="col-6 booking_button">
-                      <button>Show Listing</button>
+                      <button onClick={() => { window.location.href='/listing-page-'+selected.LISTING_ID
+                      }}>Show Listing</button>
                     </div>
                   </div>
                 </div>

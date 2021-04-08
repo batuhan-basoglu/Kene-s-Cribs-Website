@@ -14,14 +14,20 @@ class Login extends Component {
     },
   };
 
-  handleLogin = (e) => {
-    console.log(e);
-  };
+  handleLogin() {
+    // if ( !== this.state.Account.email) {
+    //   alert("invalid");
+    // }
+    // if (password !== this.state.Account.password) {
+    //   alert("invalid");
+    // }
+  }
+
   render() {
     const { t } = this.props;
     return (
       <div className="login-page">
-        <form action="" className="signin-Form" onClick={this.handleLogin}>
+        <form action="" className="signin-Form" onSubmit={this.handleLogin}>
           <img className="app-logo" src={Logo} alt="app-logo" />
           <h1 className="form-title">{t("Login_header")} </h1>
           <p>{t("Login_message")}</p>
@@ -61,11 +67,10 @@ class Login extends Component {
               </label>
             </div>
             <div className="login-btn">
-              <Link to="/account">
-                <button type="submit" class="btn btn-lg btn-primary">
-                  {t("Login_submit_button")}
-                </button>
-              </Link>
+              <Link to="/account"></Link>
+              <button type="submit" class="btn btn-lg btn-primary">
+                {t("Login_submit_button")}
+              </button>
             </div>
           </div>
         </form>
