@@ -23,11 +23,43 @@
     "Nav_Contact_Us": "Contact Us",
     "Nav_listing_page": "listing-page",
     "Nav_Login": "Login",
+<<<<<<< HEAD
     "View_Button": "View",
     "MeetTeam": "Meet the Team",
     "Sales_Ass":"sales assistant"
 
 
     
+=======
+    "Slogan_1": "YOU ARE NOT BUYING A HOUSE, ",
+    "Slogan_2": "YOU ARE BUYING A LIFESTYLE. ",
+    "Info": "Click for Details",
+    "Home1": "Welcome to Kene's Cribs. Kene's Cribs is a real estator company which provides the clients with the houses.",
+    "Home2": "The houses limited to the clients are only limited to the clients' dreams. In order to further navigate the",
+    "Home3": "website, use the navigation bar to switch between pages. Listings page is for browsing houses, Agents page",
+    "Home4": "is for browsing the estators, the Contact Us page is for the contacting us and the login page is for our",
+    "Home5": "members who want to benefit from our deals. Above are some houses which can interest you. Feel free to",
+    "Home6": "click the buttons above to explore the houses you want.",
+    "Desc": "Description",
+    "Rooms": "1 Bedroom, 2 Bathroom",
+    "Danger1": "Message could not send.",
+    "Danger2": "There are some errors in your contact form.",
+    "Success1": "The message is successfully sent.",
+    "Success2": "You contact form will be delivered to our support team.",
+    "Contact-Title": "Contact to Us",
+    "Contact-House": "Select an Agent",
+    "Contact-Agent": "Select a House",
+    "No-Pref": "No preference",
+    "Contact-First": "First Name",
+    "Contact-Last": "Last Name",
+    "Contact-Mail": "Email Address",
+    "Contact-Message": "Message",
+    "Contact-Submit": "Submit",
+    "Contact-Error1": "Please select an item in the list.",
+    "Contact-Error2": "Please fill out this field.",
+    "Contact-Error3": "Invalid email address."
+
+
+>>>>>>> 540f8f4cac411d798ced6e126b65de938da68ad1
 
 }
