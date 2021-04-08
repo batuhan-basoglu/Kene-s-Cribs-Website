@@ -1,19 +1,20 @@
 import React from "react";
 import "./listing-page-2.css";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 // import house images
 import house_img1 from "../../images/house2.jpg";
 import house_img2 from "../../images/house2-2.jpg";
 import house_img3 from "../../images/house2-3.jpg";
 const ListingPage2 = () => {
+  const { t } = useTranslation();
   return (
     <div className="single-listing-2">
       {/* Listing header */}
       <div className="row listing-header">
         <div className="col-12">
           <h2 className="listing-title">
-            <i class="fas fa-home title-icon"></i> 1490 Youville Drive
+            <i class="fas fa-home title-icon"></i> {t("Listing2-address")}
           </h2>
         </div>
       </div>
@@ -79,32 +80,12 @@ const ListingPage2 = () => {
 
       {/* Description for the listing */}
       <div className="description-box">
-        <h2 className="description-title">Description</h2>
-        <p className="listing-description">
-          Nature at its Finest The Shores of Toney Bay are located at the mouth
-          of River Phillip where it meets the Northumberland Straight with
-          direct access to the incredible recreational waterways of River
-          Phillip and nature rich Toney Bay. This nature lovers paradise boasts
-          a plethora of migratory bird life and the rich fish stock of River
-          Philip. The warm waters of the Northumberland Straight are swimmable
-          from your shorefront, easy access to year-around activities and close
-          proximity to the quaint community of Pugwash make this an ideal spot
-          for a permeant residence or cottage. There are also ocean view /
-          deeded access lots available. Large lots with unobstructed views and
-          well away from highway noise. Swim in the warm waters at beautiful
-          Heather's Beach just 4km away, fly fishing in the spring on River
-          Phillip, book at tee time at Northumberland links, 16km away or enjoy
-          a day at the Luxury Fox Harb'r Resort and Spa less then 30 mins away,
-          and in winter enjoy skiing at Ski Wentworth a short 30 minutes drive.
-          Lots are flat, cleared and ready for your dream home. All septic and
-          building lot approvals are in place, good roads, and power to the lot
-          line are included. Please take a few minutes to watch the video of the
-          stunning Shores at Toney Bay
-        </p>
+        <h2 className="description-title">{t("Listing-description-header")}</h2>
+        <p className="listing-description">{t("Listing2-description")}</p>
         <div className="booking-btn">
           <Link to="/contact-us">
             <button type="button" class="btn btn-lg btn-info">
-              Book Showing
+              {t("Listing-booking-btn")}
             </button>
           </Link>
         </div>

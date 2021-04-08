@@ -1,19 +1,22 @@
 import React from "react";
 import "./listing-page-1.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 // import house images
 import house_img1 from "../../images/house3.jpg";
 import house_img2 from "../../images/house1-2.jpg";
 import house_img3 from "../../images/house1-3.jpg";
 const ListingPage1 = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="single-listing-1">
       {/* Listing header */}
       <div className="row listing-header">
         <div className="col-12">
           <h2 className="listing-title">
-            <i class="fas fa-home title-icon"></i> 8720 Russell Road
+            <i class="fas fa-home title-icon"></i> {t("Listing1-address")}
           </h2>
         </div>
       </div>
@@ -79,29 +82,12 @@ const ListingPage1 = () => {
 
       {/* Description for the listing */}
       <div className="description-box">
-        <h2 className="description-title">Description</h2>
-        <p className="listing-description">
-          RUN DON'T WALK to this beautiful former Jayman show home. This home
-          has every feature and convenience you could want in a home. When you
-          enter you will be greeted with a large entry way, open concept main
-          floor with a very spacious chef-like kitchen, the big eat in dinning
-          area is an entertainers dream and plenty of room in the living room as
-          to cozy up to the fireplace. When you head upstairs the owner 's suite
-          will impress with a gorgeous ensuite consisting of a large soaker tub,
-          oversized shower, separate vanities, in-floor heating and 2 separate
-          closest. You will also find a nice sized flex room, spacious laundry
-          room up stairs, 4 piece main bathroom and 2 more bedrooms. Then head
-          downstairs where you will find another bedroom, bathroom and Theatre
-          room with wet bar and beverage station that is perfect for any movie
-          lover. Must not forget that this home is air conditioned, has front
-          and back irrigation outside and speakers throughout the house. All of
-          this can be yours in the lake community of Auburn Bay close to all
-          amenities and year round lake access just a short distance away
-        </p>
+        <h2 className="description-title">{t("Listing-description-header")}</h2>
+        <p className="listing-description">{t("Listing1-description")}</p>
         <div className="booking-btn">
           <Link to="/contact-us">
             <button type="button" class="btn btn-lg btn-info">
-              Book Showing
+              {t("Listing-booking-btn")}
             </button>
           </Link>
         </div>

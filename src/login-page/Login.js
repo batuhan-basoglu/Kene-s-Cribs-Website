@@ -14,14 +14,15 @@ class Login extends Component {
     },
   };
 
-  handleLogin() {
+  handleLogin = (e) => {
+    // e.preventDefault();
     // if ( !== this.state.Account.email) {
     //   alert("invalid");
     // }
     // if (password !== this.state.Account.password) {
     //   alert("invalid");
     // }
-  }
+  };
 
   render() {
     const { t } = this.props;
