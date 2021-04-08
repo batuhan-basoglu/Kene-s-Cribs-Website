@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Logo from "../images/logo1.png";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, Redirect, withRouter } from "react-router-dom";
 // import { useTranslation } from "react-i18next";
 import { withTranslation } from "react-i18next";
 class Login extends Component {
@@ -15,13 +15,15 @@ class Login extends Component {
   };
 
   handleLogin = (e) => {
-    // e.preventDefault();
-    // if ( !== this.state.Account.email) {
-    //   alert("invalid");
-    // }
-    // if (password !== this.state.Account.password) {
-    //   alert("invalid");
-    // }
+    e.preventDefault();
+    var loginEmail = document.getElementById("login-email");
+    if (loginEmail.value === this.state.Account.email) {
+      // alert("validated!!!");
+      return this.props.history.push("/account");
+    } else {
+      // alert("Errors!!")
+      return this.props.history.push("/login");
+    }
   };
 
   render() {
@@ -80,4 +82,4 @@ class Login extends Component {
   }
 }
 
-export default withTranslation()(Login);
+export default withTranslation()(withRouter(Login));

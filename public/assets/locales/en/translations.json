@@ -46,7 +46,7 @@
     "Danger2": "There are some errors in your contact form.",
     "Success1": "The message is successfully sent.",
     "Success2": "You contact form will be delivered to our support team.",
-    "Contact-Title": "Contact to Us",
+    "Contact-Title": "Contact Us",
     "Contact-House": "Select an Agent",
     "Contact-Agent": "Select a House",
     "No-Pref": "No preference",
@@ -58,17 +58,14 @@
     "Contact-Error1": "Please select an item in the list.",
     "Contact-Error2": "Please fill out this field.",
     "Contact-Error3": "Invalid email address.",
-
-    "Search-Bar":"Search your location",
-    "Budget":"Select Budget",
+    "Search-Bar": "Search your location",
+    "Budget": "Select Budget",
     "Beds": "Number of Beds",
     "Baths": "Number of Beds",
-
     "Any": "Any",
     "Listing-Button": "Show Listing",
     "listing_desc": "{{desc}}",
     "listing_address": "{{address}}",
-
     "Listing1-address": "8720 Russell Road",
     "Listing2-address": "1490 Youville Drive",
     "Listing3-address": "100 Charlie Rogers Place",
