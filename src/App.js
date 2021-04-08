@@ -3,7 +3,6 @@ import Footer from "./shared-components/footer-component/Footer";
 import Navbar from "./shared-components/navbar-component/Navbar";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import i18next from "i18next";
-import { useTranslation } from "react-i18next";
 import Cookies from "js-cookie";
 import HomePage from "./homePage/Homepage";
 import ListingsPage from "./listings-page/ListingsPage";
@@ -31,7 +30,6 @@ function App() {
   const currentLanguage = langauges.find(
     (lang) => lang.code === currentLanguageCode
   );
-  const { t } = useTranslation();
 
   useEffect(() => {
     document.body.dir = currentLanguage.dir || "ltr";
@@ -68,9 +66,6 @@ function App() {
               ))}
             </div>
           </div>
-        </div>
-        <div className="d-flex flex-column align-items-start">
-          {t("Welcome_to_React")}
         </div>
       </div>
       <BrowserRouter>
