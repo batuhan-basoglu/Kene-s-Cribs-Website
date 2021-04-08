@@ -64,18 +64,14 @@
     "Contact-Error1": "Veuillez sélectionner un élément dans la liste.",
     "Contact-Error2": "Veuillez remplir ce champ.",
     "Contact-Error3": "Adresse e-mail invalide.",
-    
     "Search-Bar": "Rechercher",
-    "Budget":"Sélectionnez Budget",
+    "Budget": "Sélectionnez Budget",
     "Beds": "Nombre de lits",
     "Baths": "Nombre de bains",
     "Any": "quelconque",
     "Listing-Button": "Afficher la liste",
-
     "listing_desc": "{{desc}}",
     "listing_address": "{{address}}",
-
-
     "Listing1-address": "8720, chemin Russell",
     "Listing2-address": "1490, promenade Youville",
     "Listing3-address": "100, place Charlie Rogers",
