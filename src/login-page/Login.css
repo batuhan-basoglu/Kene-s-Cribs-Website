@@ -1,11 +1,19 @@
+body{
+    /*
+    background-image: url("../images/login_bg3.jpg");
+    background-size:cover;
+    */
+   
+}
 .login-page{
     padding: 10% 30%;
     text-align: center;
-    background-color: pink;
+    background-color: white;
     
 }
 .signin-Form{
     border: 1px solid blanchedalmond;
+    background-color: #e7dec8;
     border-radius: 2%;
 }
 
