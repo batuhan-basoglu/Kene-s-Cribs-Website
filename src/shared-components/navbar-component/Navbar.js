@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "./Navbar.css";
 import logo from "./logo2.png";
+import Cookies from "js-cookie";
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useTranslation } from "react-i18next";
+import i18next from "i18next";
+const langauges = [
+  {
+    code: "fr",
+    name: "Français",
+    country_code: "fr",
+  },
+  {
+    code: "en",
+    name: "English",
+    country_code: "gb",
+  },
+];
+
 const Navbar = () => {
+  const currentLanguageCode = Cookies.get("i18next") || "en";
+  const currentLanguage = langauges.find(
+    (lang) => lang.code === currentLanguageCode
+  );
   const { t } = useTranslation();
+  useEffect(() => {
+    document.body.dir = currentLanguage.dir || "ltr";
+  }, [currentLanguage]);
   return (
     /* Nav Bar */
     <div className="Navbar">
@@ -27,6 +49,34 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <div class="btn-group">
+                <button
+                  type="button"
+                  class="btn btn-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-globe"></i>
+                </button>
+                <div class="dropdown-menu">
+                  {langauges.map(({ code, name, country_code }) => (
+                    <button
+                      class="dropdown-item"
+                      key={code}
+                      onClick={() => i18next.changeLanguage(code)}
+                      disabled={code === currentLanguageCode}
+                    >
+                      <span
+                        className={`flag-icon flag-icon-${country_code} mx-2`}
+                      ></span>
+                      {name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" exact to="/">
                 {t("Nav_Home")}
