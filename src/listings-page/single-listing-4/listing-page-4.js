@@ -1,19 +1,20 @@
 import React from "react";
 import "./listing-page-4.css";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 // import house images
 import house_img1 from "../../images/house4.jpg";
 import house_img2 from "../../images/house4-2.jpg";
 import house_img3 from "../../images/house4-3.jpg";
 const ListingPage4 = () => {
+  const { t } = useTranslation();
   return (
     <div className="single-listing-4">
       {/* Listing header */}
       <div className="row listing-header">
         <div className="col-12">
           <h2 className="listing-title">
-            <i class="fas fa-home title-icon"></i> 2785 8th Line Road
+            <i class="fas fa-home title-icon"></i> {t("Listing4-address")}
           </h2>
         </div>
       </div>
@@ -79,33 +80,12 @@ const ListingPage4 = () => {
 
       {/* Description for the listing */}
       <div className="description-box">
-        <h2 className="description-title">Description</h2>
-        <p className="listing-description">
-          MOVE IN READY I WALKING DISTANCE TO SHOPPING, SCHOOLS AND TRANSIT I
-          Conveniently located in Haysboro, you have Restaurants, Groceries,
-          Coffee shops, Schools and a Library all within walking distance. This
-          Updated Bungalow offers over 2000 square feet of developed living
-          space, 3 Bedrooms upstairs to accommodate almost any family and 2 down
-          stairs in the fully developed basement. Having a separate entrance
-          downstairs through the backyard makes it much easier if you ever want
-          to convert the basement into a suite. The double garage is even heated
-          with 220v plus 2 additional spaces that could be used for RV parking
-          or for any additional vehicles in the house. You will notice the home
-          has been tastefully updated over the years including a soaker tub in
-          the bathroom, in the kitchen your cabinetry goes right to the ceiling
-          for a nice finished look, granite counters and Kitchenaid appliances
-          and a new garburator. The entire property has a fresh coat of paint
-          inside and out, Newer windows and roof along with the Plumbing,
-          Electrical (Cat 5 connection throughout and 200amp service) has been
-          updated. Last but not least, the back deck already has gas and ready
-          for the BBQ season. With the BIG updates being done, all that is left
-          to do is enjoy Summer on the deck or enjoy a bonfire in your sunny
-          West facing backyard!
-        </p>
+        <h2 className="description-title">{t("Listing-description-header")}</h2>
+        <p className="listing-description">{t("Listing4-description")}</p>
         <div className="booking-btn">
           <Link to="/contact-us">
             <button type="button" class="btn btn-lg btn-info">
-              Book Showing
+              {t("Listing-booking-btn")}
             </button>
           </Link>
         </div>
