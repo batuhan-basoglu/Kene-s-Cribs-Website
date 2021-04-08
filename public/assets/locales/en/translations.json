@@ -52,8 +52,49 @@
     "Contact-Submit": "Submit",
     "Contact-Error1": "Please select an item in the list.",
     "Contact-Error2": "Please fill out this field.",
-    "Contact-Error3": "Invalid email address."
-
-
-
+    "Contact-Error3": "Invalid email address.",
+    "agents": [
+        {
+            "title": "head sales assistant",
+            "name": "Michael",
+            "src": "{{ img1 }}",
+            "word": "Michael has a genuine passion for helping others and for giving back to the community.",
+            "id": 1
+        },
+        {
+            "title": "sales assistant",
+            "name": "Jin",
+            "src": "{{ img2 }}",
+            "word": "I have a passion for assisting clients with various real estate needs.",
+            "id": 2
+        },
+        {
+            "title": "sales assistant",
+            "name": "Anita",
+            "src": "{{ img3 }}",
+            "word": "Anita looks forward to servicing you to her fullest potential, building long-lasting relationships and making your real estate experience a smooth and memorable one.",
+            "id": 3
+        },
+        {
+            "title": "sales assistant",
+            "name": "Alex",
+            "src": "{{ img4 }}",
+            "word": "Since getting licensed in 2010 Alex has consistently been a top producing agent in the GTA",
+            "id": 4
+        },
+        {
+            "title": "sales assistant",
+            "name": "Xuan",
+            "src": "{{ img5 }}",
+            "word": "Xuan grew up in the GTA, and he explored many different neighborhoods in and surrounding Toronto.",
+            "id": 5
+        },
+        {
+            "title": "sales assistant",
+            "name": "Walter",
+            "src": "{{ img6 }}",
+            "word": "Walter Henry has always been one to follow his passion. At 13 years old, he started his career as a competitive gymnast.Walter will be certain that you feel informed and at ease throughout the entire process.",
+            "id": 6
+        }
+    ]
 }

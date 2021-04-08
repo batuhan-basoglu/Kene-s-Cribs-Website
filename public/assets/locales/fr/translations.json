@@ -52,5 +52,49 @@
     "Contact-Submit": "Soumettre",
     "Contact-Error1": "Veuillez sélectionner un élément dans la liste.",
     "Contact-Error2": "Veuillez remplir ce champ.",
-    "Contact-Error3": "Adresse e-mail invalide."
+    "Contact-Error3": "Adresse e-mail invalide.",
+    "agents": [
+        {
+            "title": "chef assistant commercial",
+            "name": "Michael",
+            "src": "{{ img1 }}",
+            "word": "Michael a une véritable passion pour aider les autres et pour redonner à la communauté.",
+            "id": 1
+        },
+        {
+            "title": "assistant des ventes",
+            "name": "Jin",
+            "src": "{{ img2 }}",
+            "word": "J'ai une passion pour aider les clients avec divers besoins immobiliers.",
+            "id": 2
+        },
+        {
+            "title": "assistant des ventes",
+            "name": "Anita",
+            "src": "{{ img3 }}",
+            "word": "Anita a hâte de vous servir à son plein potentiel, de bâtir des relations durables et de faire de votre expérience immobilière une expérience agréable et mémorable.",
+            "id": 3
+        },
+        {
+            "title": "assistant des ventes",
+            "name": "Alex",
+            "src": "{{ img4 }}",
+            "word": "Depuis l'obtention de sa licence en 2010, Alex a toujours été l'un des meilleurs agents de production dans la région du Grand Toronto.",
+            "id": 4
+        },
+        {
+            "title": "assistant des ventes",
+            "name": "Xuan",
+            "src": "{{ img5 }}",
+            "word": "Xuan a grandi dans la région du Grand Toronto et a exploré de nombreux quartiers différents de Toronto et des environs.",
+            "id": 5
+        },
+        {
+            "title": "assistant des ventes",
+            "name": "Walter",
+            "src": "{{ img6 }}",
+            "word": "Walter Henry a toujours été du genre à suivre sa passion. À 13 ans, il a commencé sa carrière en tant que gymnaste de compétition. Walter sera certain que vous vous sentirez informé et à l'aise tout au long du processus.",
+            "id": 6
+        }
+    ]
 }

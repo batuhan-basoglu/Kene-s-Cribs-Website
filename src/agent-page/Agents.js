@@ -13,9 +13,7 @@ const Agents = ({ agents }) => {
           <Card.Body>
             <Card.Title>{agent.title}</Card.Title>
             <Card.Text>{agent.name}</Card.Text>
-            <Card.Text style={{ height: "7rem" }}>
-              {agent.word}
-            </Card.Text>
+            <Card.Text style={{ height: "7rem" }}>{agent.word}</Card.Text>
             <div className="buttonfriend">
               <Button variant="primary">VIEW</Button>
             </div>
