@@ -23,37 +23,7 @@
     "Nav_Contact_Us": "Nous contacter",
     "Nav_listing_page": "page de liste",
     "Nav_Login": "Connexion",
-<<<<<<< HEAD
     "View_Button": "vue",
     "MeetTeam": "Rencontrer l'équipe",
     "Sales_Ass":"assistant des ventes"
-=======
-    "Slogan_1": "VOUS N'ACHETEZ PAS UNE MAISON, ",
-    "Slogan_2": "VOUS ACHETEZ UN STYLE DE VIE. ",
-    "Info": "Cliquer pour les détails",
-    "Home1": "Bienvenue chez Kene's Cribs. Kene's Cribs est une véritable société d'estateur qui fournit les maisons aux clients.",
-    "Home2": "Les maisons limitées aux clients ne se limitent qu'aux rêves des clients. Afin de mieux naviguer dans site Web, utilisez",
-    "Home3": "la barre de navigation pour basculer entre les pages. La page des listes sert à parcourir les maisons, la page Agents",
-    "Home4": "est pour parcourir les estators, la page Contactez-nous est pour nous contacter et la page de connexion est pour notre",
-    "Home5": "membres qui souhaitent bénéficier de nos offres. Ci-dessus, quelques maisons qui peuvent vous intéresser. N'hésitez",
-    "Home6": "pas à cliquez sur les boutons ci-dessus pour explorer les maisons que vous souhaitez.",
-    "Desc": "La Description",
-    "Rooms": "1 chambre, 2 salles de bains",
-    "Danger1": "Le message n'a pas pu être envoyé.",
-    "Danger2": "Il y a des erreurs dans votre formulaire de contact.",
-    "Success1": "Le message a été envoyé avec succès.",
-    "Success2": "Votre formulaire de contact sera envoyé à notre équipe d'assistance.",
-    "Contact-Title": "Contactez-Nous",
-    "Contact-House": "Sélectionnez un Agent",
-    "Contact-Agent": "Sélectionnez une Maison",
-    "No-Pref": "Aucune préférence",
-    "Contact-First": "Prénom",
-    "Contact-Last": "Nom de Famille",
-    "Contact-Mail": "Adresse E-mail",
-    "Contact-Message": "Le Message",
-    "Contact-Submit": "Soumettre",
-    "Contact-Error1": "Veuillez sélectionner un élément dans la liste.",
-    "Contact-Error2": "Veuillez remplir ce champ.",
-    "Contact-Error3": "Adresse e-mail invalide."
->>>>>>> 540f8f4cac411d798ced6e126b65de938da68ad1
 }
