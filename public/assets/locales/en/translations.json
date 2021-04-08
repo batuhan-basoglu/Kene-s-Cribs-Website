@@ -52,7 +52,22 @@
     "Contact-Submit": "Submit",
     "Contact-Error1": "Please select an item in the list.",
     "Contact-Error2": "Please fill out this field.",
-    "Contact-Error3": "Invalid email address."
+    "Contact-Error3": "Invalid email address.",
+
+    "Search-Bar":"Search your location",
+    "Budget":"Select Budget",
+    "Beds": "Number of Beds",
+    "Baths": "Number of Beds",
+
+    "Any": "Any",
+    "Listing-Button": "Show Listing",
+    "FULL_DESCRIPTION_ENG":"RUN DON'T WALK to this beautiful former Jayman show home. This home has every feature and convenience you could want in a home. When you enter you will be greeted with a large entry way, open concept main floor with a very spacious chef-like kitchen, the big eat in dinning area is an entertainers dream and plenty of room in the living room as to cozy up to the fireplace. When you head upstairs the owner 's suite will impress with a gorgeous ensuite consisting of a large soaker tub, oversized shower, separate vanities, in-floor heating and 2 separate closest. You will also find a nice sized flex room, spacious laundry room up stairs, 4 piece main bathroom and 2 more bedrooms. Then head downstairs where you will find another bedroom, bathroom and Theatre room with wet bar and beverage station that is perfect for any movie lover. Must not forget that this home is air conditioned, has front and back irrigation outside and speakers throughout the house. All of this can be yours in the lake community of Auburn Bay close to all amenities and year round lake access just a short distance away",
+
+    "listing_desc": "{{desc}}",
+    "listing_address": "{{address}}"
+
+
+
 
 
 

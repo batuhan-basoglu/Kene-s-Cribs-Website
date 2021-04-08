@@ -26,8 +26,9 @@ import * as listingData from "./data/property-data.json";
 import "./ListingsPage.css";
 
 import compassImg from "./compass.svg";
-import { withTranslation } from "react-i18next";
-
+import { useTranslation } from "react-i18next";
+import Cookies from "js-cookie";
+import i18next from "i18next";
 
 const libraries = ["places"];
 
@@ -47,6 +48,10 @@ const center = {
 };
 
 export default function ListingsPage() {
+  const {t} = useTranslation();
+
+
+  
   const price_filter = [
     {
       value: null,
@@ -77,15 +82,15 @@ export default function ListingsPage() {
     },
     {
       value: 1,
-      label: "One Bed",
+      label: "1",
     },
     {
       value: 2,
-      label: "Two Beds",
+      label: "2",
     },
     {
       value: 3,
-      label: "Three Beds",
+      label: "3",
     }
 
   ];
@@ -97,19 +102,20 @@ export default function ListingsPage() {
     },
     {
       value: 1,
-      label: "One Bath",
+      label: "1",
     },
     {
       value: 2,
-      label: "Two Baths",
+      label: "2",
     },
     {
       value: 3,
-      label: "Three Baths",
+      label: "3",
     }
   ];
 
   //console.log(data1[0]);
+
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: `https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
@@ -159,7 +165,7 @@ export default function ListingsPage() {
     setBath(e.value);
   };
 
-  const { t } = this.props;
+
   return (
 
     <div className="main_borders">
@@ -170,7 +176,7 @@ export default function ListingsPage() {
 
         <Select
           class="search"
-          placeholder="Select Budget"
+          placeholder={t("Budget")}
           value={selectedBudget} // set selected value
           options={price_filter} // set list of the data
           onChange={handleBudgetChange} // assign onChange function
@@ -178,7 +184,7 @@ export default function ListingsPage() {
 
         <Select
           class="search"
-          placeholder="# Beds"
+          placeholder={t("Beds")}
           value={selectedBeds} // set selected value
           options={bed_filter} // set list of the data
           onChange={handleBedChange} // assign onChange function
@@ -186,7 +192,7 @@ export default function ListingsPage() {
 
         <Select
           class="search"
-          placeholder="# Baths"
+          placeholder={t("Baths")}
           value={selectedBaths} // set selected value
           options={bath_filter} // set list of the data
           onChange={handleBathChange} // assign onChange function
@@ -253,8 +259,11 @@ export default function ListingsPage() {
               }}
             >
               <div>
-                <h2>{selected.ADDRESS}</h2>
-                <p> {selected.DESC}</p>
+                <h2>{Cookies.get("i18next") === "en"? i18next.t("listing_address", {address:selected.ADDRESS_ENG}): i18next.t("listing_address", {address:selected.ADDRESS_FR})}</h2>
+
+
+                <p> {Cookies.get("i18next") === "en"? i18next.t("listing_desc", {desc:selected.DESCRIPTION_ENG}): i18next.t("listing_desc", {desc:selected.DESCRIPTION_FR})}</p>
+
                 <div>
                   <div class="row">
                     <div className="col-6">
@@ -265,8 +274,8 @@ export default function ListingsPage() {
                     </div>
 
                     <div className="col-6 booking_button">
-                      <button onClick={() => { window.location.href='/listing-page-'+selected.LISTING_ID
-                      }}>Show Listing</button>
+                      <button type="button" class="btn btn-outline-primary" onClick={() => { window.location.href='/listing-page-'+selected.LISTING_ID
+                      }}>{t("Listing-Button")}</button>
                     </div>
                   </div>
                 </div>
@@ -336,6 +345,8 @@ function Search({ panTo }) {
     }
   };
 
+  const {t} = useTranslation()
+
   return (
     <div className="search">
       <Combobox onSelect={handleSelect}>
@@ -343,7 +354,7 @@ function Search({ panTo }) {
           value={value}
           onChange={handleInput}
           disabled={!ready}
-          placeholder="Search your location"
+          placeholder= {t("Search-Bar")}
         />
         <ComboboxPopover>
           <ComboboxList>
