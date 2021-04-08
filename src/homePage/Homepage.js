@@ -43,7 +43,7 @@ class Homepage extends Component {
                   <h3 style={{ fontSize: "250%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>100 Charlie Rogers, Kanata, ON K2V 1A7</h3>
                   <h2 style={{ fontSize: "150%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>{t("Rooms")}</h2>
                   <div className="buttonka">
-                    <Button href="/listings" variant="info">{t("Info")}</Button>
+                    <Button href="/listing-page-3" variant="info">{t("Info")}</Button>
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -51,9 +51,9 @@ class Homepage extends Component {
                 <img className="headerImg" src={house2} alt="Second House" />
                 <Carousel.Caption>
                   <h3 style={{ fontSize: "250%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>1490 Youville Drive, Orléans, ON K1C 2X8</h3>
-                  <h2 style={{ fontSize: "150%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>{t("Rooms")}</h2>
+                  <h2 style={{ fontSize: "150%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>{t("Rooms1")}</h2>
                   <div className="buttonka">
-                    <Button href="/listings" variant="info">{t("Info")}</Button>
+                    <Button href="/listing-page-2" variant="info">{t("Info")}</Button>
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -61,9 +61,9 @@ class Homepage extends Component {
                 <img className="headerImg" src={house3} alt="Third House" />
                 <Carousel.Caption>
                   <h3 style={{ fontSize: "250%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>8720 Russell Road, Navan, ON K4B 1J1</h3>
-                  <h2 style={{ fontSize: "150%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>{t("Rooms")}</h2>
+                  <h2 style={{ fontSize: "150%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>{t("Rooms2")}</h2>
                   <div className="buttonka">
-                    <Button href="/listings" variant="info">{t("Info")}</Button>
+                    <Button href="/listing-page-1" variant="info">{t("Info")}</Button>
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -71,9 +71,9 @@ class Homepage extends Component {
                 <img className="headerImg" src={house4} alt="Fourth House" />
                 <Carousel.Caption>
                   <h3 style={{ fontSize: "250%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>2785 8th Line Road, Metcalfe, ON K0A 2P0</h3>
-                  <h2 style={{ fontSize: "150%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>{t("Rooms")}</h2>
+                  <h2 style={{ fontSize: "150%", textShadow: "-2px 0 black, 0 2px black, 2px 0 black, 0 -2px black" }}>{t("Rooms3")}</h2>
                   <div className="buttonka">
-                    <Button href="/listings" variant="info">{t("Info")}</Button>
+                    <Button href="/listing-page-4" variant="info">{t("Info")}</Button>
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>
