@@ -3,7 +3,9 @@ import "./listing-page-2.css";
 import { Link } from "react-router-dom";
 
 // import house images
-import house_img1 from "../../images/house1-2.jpg";
+import house_img1 from "../../images/house2.jpg";
+import house_img2 from "../../images/house2-2.jpg";
+import house_img3 from "../../images/house2-3.jpg";
 const ListingPage2 = () => {
   return (
     <div className="single-listing-2">
@@ -33,14 +35,14 @@ const ListingPage2 = () => {
             </div>
             <div class="carousel-item carousel-img">
               <img
-                src={house_img1}
+                src={house_img2}
                 class="d-block w-100"
                 alt="listing-img"
               ></img>
             </div>
             <div class="carousel-item">
               <img
-                src={house_img1}
+                src={house_img3}
                 class="d-block w-100"
                 alt="listing-img"
               ></img>
@@ -70,37 +72,34 @@ const ListingPage2 = () => {
       {/* Text box for listing amenities */}
       <div className="amentities">
         <span className="amentities-text">1</span>
-        <i class="fas fa-bed fa-2x amentities-icon"></i>
-        <span className="amentities-text">2</span>
-        <i class="fas fa-bath fa-2x amentities-icon"></i>
-        <span className="amentities-text">3</span>
-        <i class="fas fa-wifi fa-2x amentities-icon"></i>
+        <i class="fas fa-bed fa-3x amentities-icon"></i>
+        <span className="amentities-text">1</span>
+        <i class="fas fa-bath fa-3x amentities-icon"></i>
       </div>
 
       {/* Description for the listing */}
       <div className="description-box">
         <h2 className="description-title">Description</h2>
         <p className="listing-description">
-          MOVE IN READY I WALKING DISTANCE TO SHOPPING, SCHOOLS AND TRANSIT I
-          Conveniently located in Haysboro, you have Restaurants, Groceries,
-          Coffee shops, Schools and a Library all within walking distance. This
-          Updated Bungalow offers over 2000 square feet of developed living
-          space, 3 Bedrooms upstairs to accommodate almost any family and 2 down
-          stairs in the fully developed basement. Having a separate entrance
-          downstairs through the backyard makes it much easier if you ever want
-          to convert the basement into a suite. The double garage is even heated
-          with 220v plus 2 additional spaces that could be used for RV parking
-          or for any additional vehicles in the house. You will notice the home
-          has been tastefully updated over the years including a soaker tub in
-          the bathroom, in the kitchen your cabinetry goes right to the ceiling
-          for a nice finished look, granite counters and Kitchenaid appliances
-          and a new garburator. The entire property has a fresh coat of paint
-          inside and out, Newer windows and roof along with the Plumbing,
-          Electrical (Cat 5 connection throughout and 200amp service) has been
-          updated. Last but not least, the back deck already has gas and ready
-          for the BBQ season. With the BIG updates being done, all that is left
-          to do is enjoy Summer on the deck or enjoy a bonfire in your sunny
-          West facing backyard!
+          Nature at its Finest The Shores of Toney Bay are located at the mouth
+          of River Phillip where it meets the Northumberland Straight with
+          direct access to the incredible recreational waterways of River
+          Phillip and nature rich Toney Bay. This nature lovers paradise boasts
+          a plethora of migratory bird life and the rich fish stock of River
+          Philip. The warm waters of the Northumberland Straight are swimmable
+          from your shorefront, easy access to year-around activities and close
+          proximity to the quaint community of Pugwash make this an ideal spot
+          for a permeant residence or cottage. There are also ocean view /
+          deeded access lots available. Large lots with unobstructed views and
+          well away from highway noise. Swim in the warm waters at beautiful
+          Heather's Beach just 4km away, fly fishing in the spring on River
+          Phillip, book at tee time at Northumberland links, 16km away or enjoy
+          a day at the Luxury Fox Harb'r Resort and Spa less then 30 mins away,
+          and in winter enjoy skiing at Ski Wentworth a short 30 minutes drive.
+          Lots are flat, cleared and ready for your dream home. All septic and
+          building lot approvals are in place, good roads, and power to the lot
+          line are included. Please take a few minutes to watch the video of the
+          stunning Shores at Toney Bay
         </p>
         <div className="booking-btn">
           <Link to="/contact-us">

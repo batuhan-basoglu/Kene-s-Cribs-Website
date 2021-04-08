@@ -1,6 +1,7 @@
 .single-listing-4{
     padding: 7% 15%;
     /* background-color: darksalmon; */
+    text-align: center;
 }
 
 .listing-header{
@@ -13,32 +14,24 @@
     /* font-style: italic; */
 }
 
-.title-icon{
-
-}
-
 .listing-carousel{
     margin: 5% 15%;
     width: 70%;
     /* padding-right: 10; */
 }
 
-.carousel-img{
-    /* width: 70%; */
-}
-
-
 .amentities{
     border: 1px solid black;
     /* padding: 5% 0; */
     margin: 3% 40%;
-    padding: 1% 0%;
+    /* padding: 1% 0%; */
 }
 .amentities-text{
-
+    font-size: 2rem;
 }
+
 .amentities-icon{
-    margin: 0% 5%;
+    padding: 2% 7%;
 }
 
 .description-box{
@@ -49,10 +42,6 @@
 
 .description-title{
     padding: 2% 0%;
-}
-.listing-description{
-    
-
 }
 
 .booking-btn{
