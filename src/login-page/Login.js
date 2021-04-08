@@ -69,7 +69,7 @@ class Login extends Component {
             </div>
             <div className="login-btn">
               <Link to="/account"></Link>
-              <button type="submit" class="btn btn-lg btn-primary">
+              <button type="submit" class="btn btn-lg btn-secondary">
                 {t("Login_submit_button")}
               </button>
             </div>
