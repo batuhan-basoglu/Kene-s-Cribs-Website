@@ -1,4 +1,4 @@
-# SEG3125-LAB9
+# Kene's Cribs Website
 
 The Real Estate Website using React made by Ruchira Perrera, Sam Oyediran, Batuhan Basoglu, and Kene Ojukwu.
 
