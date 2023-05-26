@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@reach/combobox": "^0.10.5",
+    "@reach/combobox": "^0.18.0",
     "@react-google-maps/api": "^1.9.0",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",
