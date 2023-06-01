@@ -15,7 +15,7 @@
     "email-validator": "^2.0.4",
     "express": "^4.17.1",
     "flag-icon-css": "^3.5.0",
-    "formik": "^2.2.6",
+    "formik": "^2.4.1",
     "i18next": "^22.5.0",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.2.1",
