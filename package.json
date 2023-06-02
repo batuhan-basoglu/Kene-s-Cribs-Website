@@ -29,7 +29,7 @@
     "react-bootstrap-carousel": "^4.1.1",
     "react-dom": "^18.2.0",
     "react-fa": "^5.0.0",
-    "react-form-with-constraints": "^0.16.0",
+    "react-form-with-constraints": "^0.16.1",
     "react-form-with-constraints-bootstrap4": "^0.16.1",
     "react-google-maps": "^9.4.5",
     "react-hook-form": "^7.44.3",
