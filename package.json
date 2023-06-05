@@ -14,7 +14,7 @@
     "date-fns": "^2.13.0",
     "email-validator": "^2.0.4",
     "express": "^4.17.1",
-    "flag-icon-css": "^3.5.0",
+    "flag-icon-css": "^4.1.7",
     "formik": "^2.4.1",
     "i18next": "^22.5.0",
     "i18next-browser-languagedetector": "^7.0.1",
