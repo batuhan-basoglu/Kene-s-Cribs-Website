@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "flag-icon-css": "^4.1.7",
     "formik": "^2.4.2",
-    "i18next": "^23.2.11",
+    "i18next": "^23.4.1",
     "i18next-browser-languagedetector": "^7.1.0",
     "i18next-http-backend": "^2.2.1",
     "joi-browser": "^13.4.0",
