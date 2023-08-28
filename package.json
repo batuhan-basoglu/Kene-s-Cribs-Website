@@ -39,7 +39,7 @@
     "react-select": "^5.7.4",
     "reactstrap": "^9.2.0",
     "spectre.css": "^0.5.9",
-    "use-places-autocomplete": "^4.0.0",
+    "use-places-autocomplete": "^4.0.1",
     "web-vitals": "^3.4.0",
     "yup": "^1.2.0"
   },
