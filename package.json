@@ -33,7 +33,7 @@
     "react-form-with-constraints-bootstrap4": "^0.16.1",
     "react-google-maps": "^9.4.5",
     "react-hook-form": "^7.45.4",
-    "react-i18next": "^13.2.0",
+    "react-i18next": "^13.3.0",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "react-select": "^5.7.4",
