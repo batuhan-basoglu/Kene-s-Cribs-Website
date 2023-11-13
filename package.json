@@ -37,7 +37,7 @@
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "react-select": "^5.7.4",
-    "reactstrap": "^9.2.0",
+    "reactstrap": "^9.2.1",
     "spectre.css": "^0.5.9",
     "use-places-autocomplete": "^4.0.1",
     "web-vitals": "^3.5.0",
