@@ -36,7 +36,7 @@
     "react-i18next": "^13.5.0",
     "react-router-dom": "^6.20.1",
     "react-scripts": "5.0.1",
-    "react-select": "^5.7.4",
+    "react-select": "^5.8.0",
     "reactstrap": "^9.2.1",
     "spectre.css": "^0.5.9",
     "use-places-autocomplete": "^4.0.1",
