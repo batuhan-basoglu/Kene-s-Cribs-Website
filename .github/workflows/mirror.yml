@@ -37,5 +37,5 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.ACTIONS_SSH_KEY }}
         with:
-          source-repo: "git@github.com:batuhan-basoglu/batuhan-basoglu/Kene-s-Cribs-Website.git"
-          destination-repo: "git@git.batuhan.basoglu.co:batuhan-basoglu/batuhan-basoglu/Kene-s-Cribs-Website.git"
+          source-repo: "git@github.com:batuhan-basoglu/Kene-s-Cribs-Website.git"
+          destination-repo: "git@git.batuhan.basoglu.co:batuhan-basoglu/Kene-s-Cribs-Website.git"
