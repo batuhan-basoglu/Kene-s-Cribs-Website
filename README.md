@@ -1,13 +1,13 @@
 # Kene's Cribs Website
 
-The Real Estate Website using React made by Ruchira Perrera, Sam Oyediran, Batuhan Basoglu, and Kene Ojukwu.
+The Real Estate Website using React made by Ruchira Perrera, Sam Oyediran, Batuhan Berk Başoğlu, and Kene Ojukwu.
 
 
 After npm start execute the command "node src/shared-components/contact-us/index.js" in order to set up the backend of the contact form. (Optional)
 
 # Authors
 
-- Batuhan Basoglu, 300001274 - ArcticHawk1
+- Batuhan Berk Başoğlu, 300001274 - batuhan-basoglu
 - Ruchira Perera, 8714992 - ruchirawp
 - Sam Oyediran, 300016349 - soyed
 - Kene Ojukwu, 300027974 - kene17
